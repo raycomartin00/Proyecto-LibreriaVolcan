@@ -34,10 +34,7 @@
 
 						<td>{{$user->email}}</td>
 
-
 					  </tr>
-						
-					
 
 					</table>
                     

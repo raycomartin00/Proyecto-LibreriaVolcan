@@ -21,11 +21,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<style>
 		
-		body 
-		{   
-		  background: url('https://wallpaperaccess.com/full/388350.png'); 
-
-		}
+		
 	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 	.container-fluid {
   		height: 50vh;
@@ -37,11 +33,16 @@
 		background-image: url("https://i.imgur.com/S0b3wwy.png");
 		background-position: bottom; 
 	}
+		body{
+			background-image: url("img/headerlibros3.jpg");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
 	</style>
 </head>
 <body>
 		<div id="app col-1">
-			<nav class="navbar navbar-expand-md navbar-light bg-light shadow-sm">
+			<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 				<div class="container">
 					<a class="navbar-brand" href="{{ url('/') }}">
 					<img src="https://lh3.googleusercontent.com/Zz2xGhPAvYSU4-hA0fHacVG0avxaSq6aUZPDJaF3d2siM1Vc_MgcM_sBbFyy9X0ntNtR7gZidu7wYxhA=w1080-h608-p-no-v0" style="height:39px;"> LIBRERÍA PAPELERÍA VOLCÁN
@@ -62,11 +63,7 @@
 								<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
 							</li>
 							@endif
-							@if (Route::has('register'))
-							<li class="nav-item">
-								<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-							</li>
-							@endif
+							
 							@else
 							<li class="nav-item dropdown">
 								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

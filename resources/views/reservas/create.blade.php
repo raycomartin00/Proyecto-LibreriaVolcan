@@ -54,7 +54,39 @@ input[type="checkbox"]::before {
 input:checked[type="checkbox"]::before {
     left: 50%;
 }
-		
+	
+	body{
+		background-image: url("/img/headerlibros2.jpg") !important;
+		background-repeat: no-repeat;
+	}
+	
+	
+	.containerLibros{
+		background: white;
+		margin-left: 5%;
+		padding: 20px;
+		width: 90%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+	}
+	
+	.btn {
+	  width: auto !important;
+	  background-color: #ff7125 !important;
+	  border: none !important;
+	  outline: none !important;
+	  height: 49px !important;
+	  border-radius: 49px !important;
+	  color: #fff !important;
+	  text-transform: uppercase !important;
+	  font-weight: 600 !important;
+	  margin: 10px 0 !important; 
+	  cursor: pointer !important;
+	  transition: 0.5s !important;
+	}
+
+	.btn:hover {
+	  background-color: #FCAD2C !important;
+	}
 </style>
 
 @extends('layouts.head')
@@ -63,32 +95,42 @@ input:checked[type="checkbox"]::before {
 @section('content')
 
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Lista de libros') }}</div>
+<div class="containerLibros">
+	
 
-                <div class="card-body">
                     
 				<form method='POST' action="{{route('reservas.store')}}">
 					
 					@csrf
-					<table class='table table-bordered table-striped'>
+					<table class='table table-bordered table-striped'  id='example'>
 
-					@foreach($libros as $l)
-					  <tr>
-
-						<td><input name='libros[]' type="checkbox" value="{{$l->id_libro}}"></td> 
-						  
-						<td>{{$l->nombre}}</td>
-
-
-						<td>{{$l->Editorial->nombre}}</td>
-
-					  </tr>
 						
-					@endforeach
+						<thead>
+							<tr>
+
+								<th>Selecciona</th>
+								<th>Nombre</th>
+								<th>Editorial</th>
+								<th>Imagen</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach($libros as $l)
+							  <tr>
+
+								<td><input name='libros[]' type="checkbox" value="{{$l->id_libro}}"></td> 
+
+								<td>{{$l->nombre}}</td>
+
+
+								<td>{{$l->Editorial->nombre}}</td>
+
+								  <td><img src='{{$l->imagen}}' width="100" height="100"></td>
+
+							  </tr>
+
+							@endforeach
+						</tbody>
 
 					</table>
 					
@@ -99,12 +141,7 @@ input:checked[type="checkbox"]::before {
 					
 			    </form>
                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+    </div> 
 
 
 <!-- Load Facebook SDK for JavaScript -->
@@ -134,6 +171,18 @@ input:checked[type="checkbox"]::before {
   logged_out_greeting="Hola! Cรณmo podemos ayudarte?">
       </div>
 
+
+<script>
+$(document).ready( function () {
+	$('#example').DataTable({
+		"order": [[ 0, "desc" ]],
+		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+		"language": {
+		  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+		}
+	});
+} );
+</script>
 @endsection
 
 

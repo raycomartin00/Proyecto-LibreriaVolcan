@@ -44,7 +44,7 @@
   text-align:center;
 }
 #sidebar ul li:hover {
-  background:deepskyblue;
+  background:#FCAD2C;
 	/* background:#2f2f2f; */
 }
 #sidebar ul li *{
@@ -152,7 +152,9 @@
 		height: 800px;
 		display: flex;
 		margin-left: 10%;
-		border: 3px solid;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		background: white !important;
+		padding: 20px;
 	}
 	
 	.chartUsers{
@@ -161,7 +163,9 @@
 		display: flex;
 		margin-left: 50%;
 		margin-top: -800px;
-		border: 3px solid;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		background: white !important;
+		padding: 20px;
 	}
 	.chartReservasXUsers{
 		width: 750px;
@@ -169,7 +173,9 @@
 		display: flex;
 		margin-left: 50%;
 		margin-top: 60px;
-		border: 3px solid;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		background: white !important;
+		padding: 20px;
 	}
 
 </style>

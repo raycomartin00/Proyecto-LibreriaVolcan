@@ -45,7 +45,7 @@
   text-align:center;
 }
 #sidebar ul li:hover {
-  background:deepskyblue;
+  background:#FCAD2C;
 	/* background:#2f2f2f; */
 }
 #sidebar ul li *{
@@ -122,7 +122,7 @@
 	
   .card-body, .card, .col-md-8, .container, .row, .justify-content-center
 	{   
-	  width: 1200px; 	  
+	  width: 100% !important; 	  
 	}
 
 	button{
@@ -148,7 +148,32 @@
 	.menu{
 		margin-top: -150px;
 	}
-
+	
+	body{
+		background-image: url("/img/headerlibros3.jpg");
+		background-size: 100% 100%;
+	}
+	
+	.card-header{
+		background: white !important;
+	}
+	
+	.card{
+		border: 1px solid white !important;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		background: white !important;
+		
+	}
+	
+	.containerReservas{
+		background: white;
+		margin-left: 10%;
+		padding: 20px;
+		width: 85%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+	}
+	
+	
 </style>
 
 @extends('layouts.head')
@@ -188,21 +213,9 @@
 </div>
 -->
 
-<div class="container">
-    <div>
-        <div>
-            <div class="card">
-                <div class="card-header">{{ __('LISTA DE RESERVAS') }}</div>
+<div class="containerReservas">
+	
 
-                
-				
-				
-				<div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
 
                     <table class="table table-bordered table-striped" id='example'>
 						<thead>
@@ -224,7 +237,7 @@
 								<td>{{$r->fecha_reserva}}</td>
 								  
 								<td>
-									<a href="{{url('/reservas')}}/{{$r->id_users}}" class="btn btn-primary">Cliente</a>
+									<a  href="{{url('/reservas')}}/{{$r->id_users}}"  class="btn btn-primary" >Cliente</a>
 								</td>
 								  
 								<td>
@@ -236,19 +249,25 @@
 							@endforeach
 						</tbody>
 					</table>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
+
+
+
 
 <script>
 $(document).ready( function () {
 	$('#example').DataTable({
-		"order": [[ 0, "desc" ]]
+		"order": [[ 0, "desc" ]],
+		"lengthMenu": [[12, 25, 50, -1], [12, 25, 50, "All"]],
+		"language": {
+		  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+		}
 	});
 } );
 </script>
+
+
 
 
 @endsection

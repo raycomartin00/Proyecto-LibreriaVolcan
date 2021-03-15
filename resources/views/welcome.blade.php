@@ -1,132 +1,1579 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="es">  
+  <head>    
+    <title>Título de la WEB</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Título de la WEB">
+    <meta name="description" content="Descripción de la WEB">      
+  </head> 
+	
+	<style>
+	
+*,html{
+scroll-behavior: smooth;
+}
+:root{
+  scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+  scrollbar-width: thin !important;
+}
+body{
+margin:0;
+overflow-x:hidden;
+width:100%;
+font-family: 'Kanit', sans-serif;
+}
 
-        <title>Laravel</title>
+/*DEFAULT*/
+p{
+font-family: 'Kanit', sans-serif;
+}
+a{
+text-decoration:none;
+}
+li{
+list-style:none;
+padding:5px;
+}
+.title{
+font-size:2em;
+font-family: 'Comic Sans MS';
+-webkit-text-stroke: 1px black;
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+color: white;
+font-size: xxx-large;
+}
+.sub-title{
+font-size:1em;
+font-family: 'Kanit', sans-serif;
+color:gray;
+}
+em{
+font-style:normal;
+color:#FF7125;
+}
+.btn1{
+padding:10px 0px;
+box-shadow:0px 3px 8px -3px rgba(1,1,1,0.5);
+outline:none;
+border:0;
+background: transparent linear-gradient(
+90deg
+, #AE0A62 0%, #F8AA43 100%) 0% 0% no-repeat padding-box;
+border-radius:20px;
+color:#FF7125;
+font-weight:400;
+text-align:center;
+transition:0.5s;
+height: 80px !important;
+width: 25% !important;
+margin-left: 38%;
+margin-top: -3%;
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}}
-        </style>
+}
 
-        <style>
-            body {
-                font-family: 'Nunito';
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            @if (Route::has('login'))
+.btn2{
+padding:10px 20px;
+box-shadow:0px 3px 8px -3px rgba(1,1,1,0.5);
+outline:none;
+border:0;
+background:#FF7125;
+border-radius:20px;
+color:#fff;
+font-weight:400;
+text-align:center;
+transition:0.5s;
+}
+.btn2:hover{
+background:#3d35ec;
+}
+.banner{
+margin:auto;
+width:70%;
+text-align:center;
+}
+#scroll-up{
+position:fixed;
+bottom:2em;
+right:2em;
+background:#1e1e1e;
+width:20px;
+height:20px;
+text-align:center;
+color:#fff;
+padding:5px;
+border-radius:50%;
+box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+z-index:999;
+display:none;
+}
+.inline-photo {
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-0deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),opacity .3s .25s ease-out;
+  will-change: transform, opacity;
+}
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(-0deg);
+}
+
+
+/*LOADER*/
+.loading {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #292970;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  align-content: center;
+}
+
+.load {
+  min-height: 60pt;
+}
+
+@keyframes loading {
+  0% {
+    width: 50pt;
+    height: 50pt;
+    margin-top: 0;
+  }
+  25% {
+    height: 4pt;
+    margin-top: 23pt;
+  }
+  50% {
+    width: 4pt;
+  }
+  75% {
+    width: 50pt;
+  }
+  100% {
+    width: 50pt;
+    height: 50pt;
+    margin-top: 0;
+  }
+}
+
+.loader {
+  width: 50pt;
+  height: 50pt;
+  border-radius: 100%;
+  border: #6767fa 4pt solid;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  animation: loading 1s infinite;
+}
+
+.load-text {
+  padding-top: 15px;
+  text-align: center;
+  font: 14pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:0px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:0px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+}
+
+
+
+/*NAV-BAR*/
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:9;
+}
+
+.topnav {
+  overflow: hidden;
+  width:90%;
+  margin:auto;
+  background-color: transparent;
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition:0.5s;
+}
+
+.topnav .logo{
+float:left;
+font-family: 'Comic Sans MS';
+color:#fff;
+font-size:2em;
+
+}
+
+.active {
+  color:gray;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color:rgb(180, 205, 255);
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+ .topnav{
+ background:#ffffff;
+ width:100%;
+ }
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+#navbar {
+  background-color: #fff;
+  position: fixed;
+  top: -60px;
+  width: 100%;
+  display: block;
+  z-index:9;
+  box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar .logo{
+float:left;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.slide-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.slide-menu .dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+@media (max-width:600px){
+#navbar{
+display:none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+.main{
+width:100%;
+height:100vh;
+background-image:url("/img/main-bgfinal.jpg");
+background-size:100% 100%;
+
+}
+
+.main table{
+width:100%;
+height:100vh;
+}
+
+
+
+.main table td img{
+
+float:right;
+
+margin-top:10%;
+pointer-events:none;
+--delay: 0s;
+animation: arrows 4s var(--delay) infinite ease-in;
+}
+
+@keyframes arrows {
+  0%,
+  100% {
+    color: black;
+    transform: translateY(0);
+  }
+  50% {
+    color: #3AB493;
+    transform: translateY(20px);
+  }
+}
+
+.main table td section{
+margin:5%;
+color:#fff;
+}
+
+.main table td section .sub-title,.main table td section p{
+color:rgb(180, 205, 255);
+}
+
+@media (max-width:600px){
+.main table td{
+width:100%;
+display:block;
+}
+.main table td section{
+margin-top:20%;
+}
+.main table td img{
+width:60%;
+height:60%;
+margin-top:0%;
+pointer-events:none;
+}
+
+}
+
+
+
+
+/*CARDS*/
+.section0{
+width:100%;
+padding:30px;
+
+}
+
+.section0 .card{
+width:40%;
+padding:30px;
+box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
+border-radius:5px;
+margin:1%;
+display:inline-block;
+text-align:center;
+border-top:2px solid #FF7125;
+}
+
+.section0 .banner{
+box-shadow:0px 0px 0px 0px rgba(1,1,1,0.5);
+border-top:0px;
+}
+
+.section0 .card i{
+font-size:4em;
+color:#3077e8;
+float:left;
+}
+
+@media (max-width:600px){
+.section0{
+display:flex;
+align-items:left;
+justify-content: left;
+position:relative;
+overflow-x:auto;
+scrollbar-width:none;
+scroll-behavior: smooth;
+}
+.section0 .card{
+min-width:79%;
+}
+}
+
+
+
+/*CONTAINER*/
+.container{
+width:100%;
+}
+
+.container table{
+width:100%;
+}
+
+.container table td{
+width:50%;
+}
+
+.container table td img{
+margin:auto;
+}
+
+.container table td:nth-child(2),.container table .aboutus_td2{
+padding:20px;
+}
+
+@media (max-width:600px){
+.container table td{
+width:100%;
+display:block;
+}
+.container table td img{
+width:90%;
+}
+.container table td:nth-child(2),.container table .aboutus_td2{
+padding:10px;
+width:95%;
+}
+}
+
+
+
+
+
+
+
+       .slick{
+		width:90%;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		.slick table{
+		width:100%;
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		.slick table td{
+		width:30%;
+		padding:1%;
+		}
+	
+		.slick table td ul li{
+		list-style:none;
+		padding:10px 0px;
+		}
+		
+		.slick table td ul li a{
+		text-decoration:none;
+		transition:0.5s;
+		}
+		
+		.slick table td ul li a:hover{
+		color:#8798bd;
+		}
+		
+		.slick table td ul li h3{
+		color:#FF7125;
+		}
+		
+		.slick table td ul li p{
+		color:rgba(1,1,1,0.7);
+		}
+		
+		.slick table td:nth-child(1) ul{
+		text-align:right;
+		}
+		
+		.slick table td:nth-child(3) ul{
+		text-align:left;
+		}
+		
+		.slick table td:nth-child(2) .card{
+		margin-left:auto;
+		margin-right:auto;
+		}
+		
+		.slick .card {
+        position: relative;
+        width: 90%;
+        height:80vh;
+        overflow: hidden;
+        border-radius: 5px;
+       }
+
+
+       .slick .card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 900;
+        display: block;
+        width: 100%;
+        height: 100%;
+       }
+
+      .slick .card_part {
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 7;
+       display: flex;
+       align-items: center;
+       width: 100%;
+       height: 100%;
+       background-size:cover;
+       transform: translateX( 700px );
+       background-image: url("https://i.ibb.co/qDfqrrK/04.webp");
+       background-repeat:no-repeat;
+       animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+       }
+
+
+      .slick .card_part.card_part-two {
+       z-index: 6;
+       background-image: url("https://i.ibb.co/qDfqrrK/04.webp");
+       animation-delay: 7s;
+       background-repeat:no-repeat;
+      }
+
+      .slick .card_part.card_part-three {
+       z-index: 5;
+       background-image: url("https://i.ibb.co/qDfqrrK/04.webp");
+       animation-delay: 14s;
+       background-repeat:no-repeat;
+       }
+
+      .slick .card_part.card_part-four {
+       z-index: 4;
+       background-image: url("https://i.ibb.co/qDfqrrK/04.webp");
+       animation-delay: 21s;
+       background-repeat:no-repeat;
+       }
+
+
+      @keyframes opaqTransition {
+       3% { transform: translateX( 0 ); }
+       25% { transform: translateX( 0 ); }
+       28% { transform: translateX( -700px ); }
+       100% { transform: translateX( -700px ); }
+       }
+       
+       
+       @media (max-width:600px){
+       .slick{
+		width:100%;
+		margin-left:auto;
+		margin-right:auto;
+		}
+       .slick table td{
+       width:95%;
+       display:block;
+       padding:0%;
+       }
+       .slick table td ul{
+       width:85%;
+       }
+       .slick table td:nth-child(1) ul{
+		text-align:left;
+		}
+		.slick .card {
+        position: relative;
+        width: 60%;
+        height:50vh;
+        overflow: hidden;
+        border-radius: 5px;
+       }
+       }
+       
+       @media (max-width:500px){
+       .slick table td{
+       width:100%;
+       display:block;
+       }
+       .slick table td:nth-child(1) ul{
+		text-align:left;
+		}
+		.title{
+		font-size:1.3em;
+		}
+		.sub-title{
+		font-size:0.6em;
+		}
+		.slick table td ul li{
+		padding:5px 0px;
+		}
+       }
+       
+       
+
+.section1{
+width:90%;
+margin:auto;
+}
+.section1 .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.section1 .panel img{
+margin:0px 20px;
+}
+
+.section1 .active,.section1 .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #FF7125;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.section1 .active:after {
+  content: "\2212";
+}
+
+.section1 .panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  margin:auto;
+  transition: max-height 0.2s ease-out;
+}
+
+ @media (max-width:600px){
+ .section1 .banner{
+ width:90%;
+ }
+ }
+
+
+
+
+
+/*FOOTER*/
+.footer{
+width:100%;
+background-image:url("/img/Footerfinal.png");
+background-size:100% 100%;
+padding:20px 0px;
+}
+
+.footer section{
+width:20%;
+padding:2%;
+display:inline-block;
+}
+
+
+
+.footer img{
+width:200px;
+height:80px;
+font-size:2em;
+}
+
+.footer p{
+font-size:12px;
+color:#fff;
+}
+
+.footer section .title{
+color:#fff;
+font-size:1em;
+}
+
+.footer section .title:before{
+content:"";
+}
+
+.footer section a{
+text-decoration:none;
+color:#fff;
+font-size:14px;
+transition:0.5s;
+}
+
+.footer section a:hover{
+color:#a49e59;
+}
+
+.footer section input{
+width:70%;
+border:0;
+outline:none;
+height:30px;
+padding:5px;
+}
+
+.footer section button{
+width:50px;
+height:40px;
+padding:10px 5px;
+outline:none;
+border:0;
+background:#CCCCCC;
+color:#193aab;
+}
+
+.footer section .fa-map-marker,.footer section .fa-phone,.footer section .fa-envelope{
+font-size:23px;
+margin:10px;
+transition:0.5s;
+}
+
+.footer section i:hover{
+color:#fff;
+}
+
+.sub-footer{
+background:#1e1e1e;
+text-align:center;
+font-size:14px;
+color:gray;
+padding:10px 0px;
+}
+@media (max-width:600px){
+.footer section{
+display:block;
+width:90%;
+}
+.footer section:nth-child(2),.footer section:nth-child(3){
+width:40%;
+display:inline-block;
+margin:2%;
+}
+}
+
+
+
+
+
+/*ABOUT US*/
+.header_aboutus{
+width:100%;
+height:40vh;
+background-image:url("../images/aboutus_header.webp");
+background-size:cover;
+background-attachment:fixed;
+text-align:center;
+color:#fff;
+}
+
+.header_aboutus .title{
+position:relative;
+top:15vh;
+}
+
+.header_aboutus .sub-title{
+position:relative;
+top:20vh;
+color:#f7f7f7;
+}
+
+.header_aboutus .sub-title a{
+color:#fff;
+}
+
+
+
+:root {
+--rose1: linear-gradient(to right,#E50091,#AE0D97);
+--rose2: linear-gradient(to right,#D219B4,#E50091);
+--blue1: linear-gradient(to right,#3b29cf,#4267D9);
+--blue2: linear-gradient(to right,#4267D9,#17B1EF);
+--green1: linear-gradient(to right,#42c966,#5BD80B);
+--green2: linear-gradient(to right,#04E2CB,#42c966);
+--orange1: linear-gradient(to right,#E03C30,#FF7125);
+--orange2: linear-gradient(to right,#FF7125,#EFBC2F);
+}
+
+
+.container-fluid{
+ background:#f7f7f7;
+ padding:5% 0%;
+}
+
+.main-timeline{
+    font-family: sans-serif;
+    position: relative;
+    width:90%;
+    margin:auto;
+}
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-timeline .timeline{
+    width: 50%;
+    padding: 0 0 0 70px;
+    margin: 0 0 0 50px;
+    float: right;
+    position: relative;
+    text-align:left;
+    margin-top:10vh;
+}
+.main-timeline .timeline ul li:before{
+content:"\f0a4";
+font-family:"FontAwesome";
+margin:0px 5px;
+}
+
+.main-timeline .timeline:before{
+    content: '';
+    background-color: #D219B4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -70px;
+    top: 50%;
+}
+.main-timeline .timeline-content{
+    color: #fff;
+    background: var(--rose1);
+    min-height: 140px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -5px #555;
+    display: block;
+    position: relative;
+}
+.main-timeline .timeline-content:before,
+.main-timeline .timeline-content:after{
+    content: '';
+    background: #E50091;
+    height: 16px;
+    width: 16px;
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    left: -8px;
+    top: 50%;
+}
+.main-timeline .timeline-content:after{
+    background: var(--rose2);
+    transform: translateY(-50%) rotate(0);
+    left: -140px;
+    width: 140px;
+    height: 5px;
+}
+.main-timeline .timeline-content:hover{ 
+    text-decoration: none; 
+}
+.main-timeline .timeline-icon{
+    color: rgba(0,0,0,0.2);
+    font-size: 40px;
+    position: absolute;
+    top: 15px;
+    left: -90px;
+}
+.main-timeline .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+.main-timeline .description{
+    font-size: 15px;
+    margin: 0;
+}
+.main-timeline .timeline:nth-child(even){
+    padding: 0 70px 0 0;
+    margin: 0 70px 0 0;
+    float: left;
+}
+.main-timeline .timeline:nth-child(even):before{
+    left: auto;
+    right: -71px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    left: auto;
+    right: -8px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-content:after{
+    left: auto;
+    right: -140px;
+}
+.main-timeline .timeline:nth-child(even) .timeline-icon{
+    left: auto;
+    right: -90px;
+}
+.main-timeline .timeline:nth-child(4n+2):before{ 
+    background-color: #17B1EF; 
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content{
+    background: var(--blue1);
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before{ 
+    background: #4267D9; 
+}
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:after{
+    background: var(--blue2);
+}
+.main-timeline .timeline:nth-child(4n+3):before{ 
+    background-color: #04E2CB; 
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content{
+    background: var(--green1);
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before{ 
+    background: #42c966; 
+}
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:after{
+    background: var(--green2);
+}
+.main-timeline .timeline:nth-child(4n+4):before{
+    background-color: #EFBC2F; 
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content{
+    background: var(--orange1);
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before{ 
+    background: #FF7125; 
+}
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:after{
+    background: var(--orange2);
+}
+
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        padding: 0 0 0 40px;
+        margin-bottom: 20px;
+    }
+    .main-timeline .timeline:before,
+    .main-timeline .timeline:nth-child(even):before{
+        transform: translateY(0);
+        left: 0;
+        right: auto;
+        top: 47px;
+    }
+    .main-timeline .timeline:nth-child(4n+2) .timeline-content{
+        background: linear-gradient(to left,#3b29cf,#4267D9);
+    }
+    .main-timeline .timeline:nth-child(4n+4) .timeline-content{
+        background: linear-gradient(to left,#E03C30,#FF7125);
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline:nth-child(even) .timeline-content:before{
+        transform: translateY(0) rotate(45deg);
+        top: 45px;
+        left: -4px;
+    }
+    .main-timeline .timeline-content:after,
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        width: 40px;
+        transform: translateY(0);
+        right: auto;
+        left: -38px;
+        top: 50px;
+    }
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        transform: translateY(0) rotateY(180deg);
+    }
+    .main-timeline .timeline-icon,
+    .main-timeline .timeline:nth-child(even) .timeline-icon{
+        font-size: 22px;
+        left: -30px;
+        right: auto;
+    }
+}
+@media screen and (max-width:567px){
+    .main-timeline .title{ font-size: 18px; }
+    .main-timeline{
+    font-family: sans-serif;
+    position: relative;
+    width:75%;
+    margin:auto;
+}
+}
+
+
+
+
+
+
+
+
+/*CONTACT FORM*/
+.container .contact_details{
+width:90%;
+margin:auto;
+}
+
+.container .contact_details td{
+text-align:center;
+}
+
+.contact form{
+width:60%;
+margin:auto;
+}
+.contact form input,.contact form textarea {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background-color: #EBECF0;
+  text-shadow: 1px 1px 0 #FFF;
+  margin-top:2%;
+}
+.contact form input,.contact form textarea {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  resize:none;
+}
+.contact form input:focus {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.contact form button {
+    color: #0f1c48;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+        border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    width:50%;
+    margin-top:2%;
+  
+}
+.contact form button:hover {
+  box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+  color:#fff;
+}
+.contact form button:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+
+
+.credits{
+  background:#1e1e1e;
+  color:gray;
+  font-size:13px;
+  padding:10px;
+  position:fixed;
+  right:0;
+  bottom:20px;
+}
+		
+		
+.fa-handshake-o:before {
+    content: "\f2b5";
+	color: black !important;
+}
+		
+.fa-line-chart:before {
+    content: "\f201";
+	color: black !important;
+}
+		
+.fa-phone:before {
+    content: "\f095";
+	color: black !important;
+}
+		
+.fa-thumbs-up:before {
+    content: "\f164";
+	color: black !important;
+}
+		
+.fa-users:before {
+    content: "\f0c0";
+	color: black !important;
+}
+
+.a {
+    text-decoration: none;
+    font-size: xxx-large;
+	color: white !important;
+}
+		
+h1{
+font-size: 50pt !important;
+}
+		
+h2{
+	color: white;
+}
+	
+	</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  <body>    
+	  
+	  
+	  
+<!--TITLE-->
+<title>LIBRERÍA PAPELERÍA VOLCÁN</title>
+
+<!--ICON-->
+<link rel="shortcut icon" href="images/logo.svg">
+
+<!--META TAGS-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="author" content="Mahesh">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="LEVIOOSA" />
+
+<!--EXTERNAL CSS-->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/custom.css">
+
+<!--PLUGIN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">  
+</head>
+<body>
+ 
+
+
+<!--NAV-BAR-->
+<header>
+	
+<div class="topnav" id="myTopnav">
+
+  <a class="logo"><img src="/img/logolibreriafinal.png" width="50" height="37"> LIBRERÍA PAPELERÍA VOLCÁN</a>
+
+	@if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Inicio</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Reserva Ya</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
+                       
                     @endauth
                 </div>
             @endif
+  <a href="/MAHESHBYL/details/mdOmWZG">Contacto</a>
+  <a href="about.html">Sobre Nosotros</a>
+  
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+</header>
+<div id="navbar">
+<div class="slide-menu">
+  <a class="logo">LIBRERÍA PAPELERÍA VOLCÁN</a>
+ 
+@if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Inicio</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Reserva Ya</a>
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
+                    @endauth
                 </div>
+            @endif
+   <a href="https://codepen.io/MAHESHBYL/details/mdOmWZG">Contacto</a>
+  <a href="about.html">Sobre Nosotros</a>
+   
+</div>
+</div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+<!--MAIN-->
+<div class="main">
+<table>
+<tr>
+	
+<td>
+	<div align="center"><h1 class="title">Y TÚ ¿QUIERES ESTAR TRANQUILO?</h1></div>
+	<div align="center"><h2>Reserva ya tus libros de texto y no esperes hasta el final</h2></div>
+<section>
+	
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
+<div class="btn1"><a href="{{ route('login') }}" class="a" >Reserva Ya</a></div>
+</section>
+</td>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
+</tr>
+</table>
+</div>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--CARDS-->
+<section class="section0" id="sections">
+<div class="card banner">
+<h1 class="title">¿Qué Ofrecemos?</h1>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
+</div>
+<div class="card inline-photo show-on-scroll">
+<i class="fa fa-handshake-o"></i>
+<h3>Excelente atención al cliente</h3>
+</div>
+<div class="card inline-photo show-on-scroll">
+<i class="fa fa-thumbs-up"></i>
+<h3>Recruiting Services</h3>
+</div>
+<div class="card inline-photo show-on-scroll">
+<i class="fa fa-line-chart"></i>
+<h3>Precios de Escándalo</h3>
+</div>
+<div class="card inline-photo show-on-scroll">
+<i class="fa fa-users"></i>
+<h3>Equipo con años de experiencia</h3>
+</div>
+<div class="card inline-photo show-on-scroll">
+<i class="fa fa-phone"></i>
+<h3>Pedidos a domicilio</h3>
+</div>
+</section>
 
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
 
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
 
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
+
+
+<section class="slick" id="moreaboutus">
+<div class="banner">
+	<br>
+	<h1 class="title">How You Can Benifit </h1>
+	</div>
+	<table>
+	<tr>
+		<td>
+		<ul>
+		<li>
+		<h3>Discovery phase </h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		</li>
+		<li>
+		<h3>Effective development methodologies </h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		</li>
+		<li>
+		<h3>Favorable timezone and cultural closeness </h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		</li>
+		</ul>
+		</td>
+		<td>
+		<div>
+			<img src="/img/telefono.jpg">
+       
+   
+       </div>
+		</td>
+		<td>
+		<ul>
+		<li>
+		<h3>Centres of Excellence </h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</li>
+		<li>
+		<h3>Clear, timely communication </h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		</li>
+		<li>
+		<h3>Quick and easy start </h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		</li>
+		</ul>
+		</td>
+	</tr>
+	</table>
+	</section>
+	
+	
+
+
+
+	
+	
+<!--FOOTER-->
+<footer>
+<div class="footer">
+
+
+<section>
+<p class="title">OTHER LINKS</p>
+<p><a href="#">Ticket</a></p>
+<p><a href="#">Terms & Conditions</a></p>
+<p><a href="#">Cookie Policy</a></p>
+<p><a href="#">Privacy Policy</a></p>
+</section>
+
+<section>
+<p class="title">SHORT CUT</p>
+<p><a href="https://codepen.io/MAHESHBYL/details/mdOmWZG">Contact Us</a></p>
+<p><a href="#">Services</a></p>
+<p><a href="#">About Us</a></p>
+<p><a href="#">Our Fields</a></p>
+</section>
+
+<section>
+
+<p><a title="Address, Country, Pincode"><i class="fa fa-map-marker"></i></a> <a href="#"><i class="fa fa-phone"></i></a> <a href="#"><i class="fa fa-envelope"></i></a></p>
+</section>
+
+
+</footer>
+
+
+<a href="#" id="scroll-up"><i class="fa fa-angle-up"></i></a>
+
+
+<!--JAVASCRIPT-->
+<script>
+
+	var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+
+
+
+
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("navbar").style.top = "0";
+    document.getElementById("scroll-up").style.display = "block";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+    document.getElementById("scroll-up").style.display = "none";
+  }
+}
+
+
+
+
+
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+
+
+
+//SCROLL ANIMATE
+var scroll = window.requestAnimationFrame ||
+             function(callback){ window.setTimeout(callback, 1000/60)};
+var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
+function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+      if (isElementInViewport(element)) {
+        element.classList.add('is-visible');
+      } else {
+        element.classList.remove('is-visible');
+      }
+    });
+
+    scroll(loop);
+}
+loop();
+
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+
+
+
+
+var myVar;
+function myLoader() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+</script>
+
+  
+ 
+	  
+	 		
+  </body>  
 </html>

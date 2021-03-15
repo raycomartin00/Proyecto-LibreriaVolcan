@@ -1,4 +1,9 @@
+<style>
 
+	body{
+		background-image: url("/img/headerlibros2.jpg");
+	}
+</style>
 
 @extends('layouts.head')
 

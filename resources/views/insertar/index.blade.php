@@ -46,7 +46,7 @@
   text-align:center;
 }
 #sidebar ul li:hover {
-  background:deepskyblue;
+  background:#FCAD2C;
 	/* background:#2f2f2f; */
 }
 #sidebar ul li *{
@@ -151,21 +151,25 @@
 	}
 	.insertLibro{
 		background: white;
-		width: 38%;
+		width: 45%;
 		height: 700px;
-		display: flex;
-		margin-left: 10%;
-		margin-top: 2%;
-		margin-right: 10%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		background: white !important;
+		padding: 20px;
+		display: inline-block;
+		 vertical-align: top;
 	}
 	
 	.insertEditorial{
 		background: white;
-		width: 40%;
+		width: 45%;
 		height: 700px;
-		display: flex;
-		margin-left: 50%;
-		margin-top: -36.5%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		background: white !important;
+		padding: 20px;
+		display: inline-block;
+		margin-left: 5%;
+		
 	}
 	
 
@@ -174,19 +178,44 @@
 	  font-size; 120px;
 	  color: orange;
 	}
-	.form{
-		margin-left: 20%;
-		display: flex;
-	}
+	
 	.encabezado{
 		height: 40px;
 		background: #FCAD2C;
 		width: 100%;
 		padding: .75rem 1.25rem;
-		margin-bottom: 0;
+		margin-bottom: 2% !important;
+		border-radius: 20px;
+		
 	}
-	form{
-		margin-top: 10%;
+	
+	
+	.containerInsertar{
+		background: white;
+		margin-left: 10%;
+        width: 85%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+        height: auto;
+		padding: 100px;
+	}
+	
+	.btn {
+	  width: auto !important;
+	  background-color: #ff7125 !important;
+	  border: none !important;
+	  outline: none !important;
+	  height: 49px !important;
+	  border-radius: 49px !important;
+	  color: #fff !important;
+	  text-transform: uppercase !important;
+	  font-weight: 600 !important;
+	  margin: 10px 0 !important; 
+	  cursor: pointer !important;
+	  transition: 0.5s !important;
+	}
+
+	.btn:hover {
+	  background-color: #FCAD2C !important;
 	}
 	
 	
@@ -216,9 +245,13 @@
 
 
 
+<div class="containerInsertar">
+	
 <div class="insertLibro">
+	
+	
 	<div class="encabezado"> <b>INSERTAR NUEVO LIBRO</b>
-		<div class="form"> 
+		
 
 
 			<form method="POST" action="{{url('/insertarLibro')}}">			  
@@ -246,17 +279,19 @@
 					@csrf
 				<br><br><br><br><br><br><br><br>
 				<p class="center-align">
-				  <button type="submit" class="btn btn-dark">Guardar</button>
+				  <button type="submit" class="btn btn-dark">Guardar Libro</button>
 				</p>
 			</form>
 
-		</div>
-	</div>
+	</div>	
 	
 </div>
+	
+	
 <div class="insertEditorial">
+
 	<div class="encabezado"> <b>INSERTAR NUEVA EDITORIAL</b>
-		<div class="form">
+		
 
 
 			<form method="POST" action="{{url('/insertarEditorial')}}">			  
@@ -271,13 +306,13 @@
 				
 				<div class="input-field">
 							<i class="material-icons prefix">navigation</i>
-							<label for="direccion">Dirección</label>
+							<label for="direccion">Direcciรณn</label>
 							<input type="text" name="direccion" required>
 				</div>
 				
 				<div class="input-field">
 							<i class="material-icons prefix">markunread</i>
-							<label for="cod_postal">Código Postal</label>
+							<label for="cod_postal">Cรณdigo Postal</label>
 							<input type="number" name="cod_postal" required>
 				</div>
 				
@@ -302,16 +337,16 @@
 					@csrf
 				<br>
 				<p class="center-align">
-				  <button type="submit" class="btn btn-dark">Guardar</button>
+				  <button type="submit" class="btn btn-dark">Guardar Editorial</button>
 				</p>
 			</form>
 
-		</div>
+		
 	</div>
 </div>
 
 
-
+</div>
 @endsection
 
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
