@@ -319,28 +319,38 @@
 
 							<th>id</th>
 							<th>Nombre</th>
+							<th>Direccion</th>
+							<th>Códifo Postal</th>
+							<th>Teléfono</th>
+							<th>Persona Encargada</th>
 							<th>Observaciones</th>
-							<th>Editorial</th>
 							<th>Acciones</th>
+							
 
 						</tr>
 					</thead>
 					<tbody>
 
-						@foreach($libross as $l)
+						@foreach($editorial as $e)
 						  <tr>
 
-							<td style="vertical-align:middle;">{{$l->id_libro}}</td> 
+							<td style="vertical-align:middle;">{{$e->id_editorial}}</td> 
 
-							<td style="vertical-align:middle;">{{$l->nombre}}</td>
+							<td style="vertical-align:middle;">{{$e->nombre}}</td>
 
-							<td style="vertical-align:middle;">{{$l->observaciones}}</td>
+							<td style="vertical-align:middle;">{{$e->direccion}}</td>
 
-							<td style="vertical-align:middle;">{{$l->Editorial->nombre}}</td>
+							<td style="vertical-align:middle;">{{$e->cod_postal}}</td>
+							  
+							<td style="vertical-align:middle;">{{$e->telefono}}</td>
+							  
+							 <td style="vertical-align:middle;">{{$e->persona_encargada}}</td>
+							  
+							 <td style="vertical-align:middle;">{{$e->observaciones}}</td>
 							  
 							  <td style="vertical-align:middle;">
 							  
-							<form action="{{ route('libros.destroy', $l->id_libro)}}" method="post" style="display: inline-block">
+							<form action="{{ route('editoriales.destroy', $e->id_editorial)}}" method="post" style="display: inline-block">
 								@csrf
 								@method('DELETE')
 								<button  type="submit" class="boton"><i class="material-icons">delete_forever</i></button>
@@ -359,7 +369,7 @@
 	
 	<br>
 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-	   Crear Nuevo Libro
+	   Crear Nueva Editorial
 	</button>
 	<br><br>
 	
@@ -381,7 +391,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">INSERTAR LIBRO</h5>
+        <h5 class="modal-title" id="exampleModalLabel">INSERTAR EDITORIAL</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -389,34 +399,52 @@
      
   
 			
-		<form method="POST" action="{{ route('libros.store')}}">			  
-				  @csrf
+		<form method="POST" action="{{ route('editoriales.store')}}">			  
+					  @csrf
 
-			<br>
-			<div class="input-field">
-						<i class="material-icons prefix">perm_identity</i>
-						<label for="nombre">Nombre</label>
-						<input type="text" name="nombre" size="35" required>
-			</div>
-			<br>
-			<div class="input-field">
-						<i class="material-icons prefix">person_pin</i>
-						<label for="id_editorial">Editorial</label>
-						<input type="number" name="id_editorial"  required>
-			</div>
-			<br>
-			<div class="input-field">
-						<i class="material-icons prefix">mode_edit</i>
-						<label for="observaciones">Observaciones</label><br><br>
-						<textarea name="observaciones" rows="3" cols="50" class="materialize-textarea"   length="140" required></textarea>
-			</div>
+				
+				<div class="input-field">
+							<i class="material-icons prefix">perm_identity</i>
+							<label for="nombre">Nombre</label>
+							<input type="text" name="nombre" size="50" required>
+				</div>
+				
+				<div class="input-field">
+							<i class="material-icons prefix">navigation</i>
+							<label for="direccion">Direcciรณn</label>
+							<input type="text" name="direccion" required>
+				</div>
+				
+				<div class="input-field">
+							<i class="material-icons prefix">markunread</i>
+							<label for="cod_postal">Cรณdigo Postal</label>
+							<input type="number" name="cod_postal" required>
+				</div>
+				
+				<div class="input-field">
+							<i class="material-icons prefix">phone</i>
+							<label for="telefono">Telefono</label>
+							<input type="number" name="telefono" required>
+				</div>
+				
+				<div class="input-field">
+							<i class="material-icons prefix">person</i>
+							<label for="persona_encargada">Persona Encargada</label>
+							<input type="text" name="persona_encargada" required>
+				</div>
+				
+				<div class="input-field">
+							<i class="material-icons prefix">mode_edit</i>
+							<label for="observaciones">Observaciones</label>
+							<textarea name="observaciones" rows="10" class="materialize-textarea"  length="140" required></textarea>
+				</div>
 
-				@csrf
-			<br><br>
-			<p class="center-align" align="center">
-			  <button type="submit" class="btn btn-dark">Guardar Libro</button>
-			</p>
-		</form>
+					@csrf
+				<br>
+				<p class="center-align">
+				  <button type="submit" class="btn btn-dark">Guardar Editorial</button>
+				</p>
+			</form>
 	  
 		  
       

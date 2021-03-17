@@ -147,6 +147,7 @@ a:hover {
 		height: 200px;
 		position: relative;
 		
+		
 	}
 	
 	
@@ -162,25 +163,45 @@ a:hover {
 	}
 	
 	.btn {
-  width: auto;
-  background-color: #ff7125;
-  border: none;
-  outline: none;
-  height: auto;
-  border-radius: 49px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 10px 0;
-  cursor: pointer;
-  transition: 0.5s;
+  width: auto !important;
+  background-color: #ff7125 !important;
+  border: none !important;
+  outline: none !important;
+  height: auto !important;
+  border-radius: 49px !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  margin: 10px 0 !important;
+  cursor: pointer !important;
+  transition: 0.5s !important;
 }
+	
+	.direccion{
+		margin-right: 20px;
+	}
+	
+	.tituloMapa{
+		text-align: center;
+	}
+	
+	.botonLocalizar{
+		position: relative;
+		left: 40%;
+	}
+	
+	
+	
+	
+
 	
 
 </style>
 @extends('layouts.head')
 
 @section('content')
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
   <div class="main-container">
     <div class="profile-content">
@@ -204,71 +225,71 @@ a:hover {
             <table class="table table-user-information">
                 <tbody>
                     <tr>        
-                        <td>
+                        <td style="vertical-align:middle;">
                             <strong>
-                                <span class="glyphicon glyphicon-asterisk text-primary"></span>
+                                <span class="glyphicon glyphicon-asterisk text-primary"></span><i class="material-icons">person</i>
                                 Nombre                                                
                             </strong>
                         </td>
-                        <td class="text-primary">
+                        <td class="text-primary" style="vertical-align:middle;">
                               {{$user->name}}   
                         </td>
                     </tr>
                     <tr>    
-                        <td>
+                        <td style="vertical-align:middle;">
                             <strong>
-                                <span class="glyphicon glyphicon-user  text-primary"></span>    
+                                <span class="glyphicon glyphicon-user  text-primary"></span><i class="material-icons">perm_identity</i>    
                                 Apellidos                                               
                             </strong>
                         </td>
-                        <td class="text-primary">
+                        <td class="text-primary" style="vertical-align:middle;">
                                 {{$user->apellidos}}
                         </td>
                     </tr>
                     <tr>        
-                        <td>
+                        <td style="vertical-align:middle;">
                             <strong>
-                                <span class="glyphicon glyphicon-cloud text-primary"></span>  
+                                <span class="glyphicon glyphicon-cloud text-primary"></span>  <i class="material-icons">email</i>
                                 Email                                                
                             </strong>
                         </td>
-                        <td class="text-primary">
+                        <td class="text-primary" style="vertical-align:middle;">
                            {{$user->email}} 
                         </td>
                     </tr>
 
                     <tr>        
-                        <td>
+                        <td style="vertical-align:middle;">
                             <strong>
-                                <span class="glyphicon glyphicon-bookmark text-primary"></span> 
+                                <span class="glyphicon glyphicon-bookmark text-primary"></span> <i class="material-icons">directions</i>
                                 Dirección                                                
                             </strong>
                         </td>
-                        <td class="text-primary">
+                        <td class="text-primary" style="vertical-align:middle;">
                             {{$user->direccion}} 
                         </td>
                     </tr>
 
 
                     <tr>        
-                        <td>
+                        <td style="vertical-align:middle;">
                             <strong>
-                                <span class="glyphicon glyphicon-eye-open text-primary"></span> 
+                                <span class="glyphicon glyphicon-eye-open text-primary"></span> <i class="material-icons">person</i>
                                 DNI                                                
                             </strong>
                         </td>
-                        <td class="text-primary">
+                        <td class="text-primary" style="vertical-align:middle;">
                             {{$user->dni}}
                         </td>
                     </tr>
                     <tr>        
-                        <td>
+                        <td style="vertical-align:middle;">
                             <strong>
-                                <span class="glyphicon glyphicon-envelope text-primary"></span> 
+                                <span class="glyphicon glyphicon-envelope text-primary"></span> <i class="material-icons">local_phone</i>
                                 Teléfono                                                
                             </strong>
                         </td>
-                        <td class="text-primary">
+                        <td class="text-primary" style="vertical-align:middle;">
                             {{$user->telefono}}  
                         </td>
                     </tr>
@@ -280,16 +301,16 @@ a:hover {
             </div>
         </div>
 		
-		<div class="mapa" id="map">
-			
-			
 		
+	<div class="mapa">
 		
-		
-		</div>
-		
-		
-		
+    <h4 class="tituloMapa"><i class="material-icons direccion">gps_fixed</i>Dirección del Usuario</h4>
+    
+    <div id="myMap" style="position:relative;width:100%;height:400px;"></div>
+    
+		<input type="button" class="btn btn-primary botonLocalizar" onclick="Search()" name="volver atrás" value="Localizar">
+	</div>
+	
       
     </div>
 </div>
@@ -297,29 +318,87 @@ a:hover {
 <script src="/assets/gmap3.js?body=1" type="text/javascript"></script>
 
 
-<script>
+
+<script type='text/javascript'>
+	
+    var map, searchManager;
+
+    function GetMap() {
+        map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'AoaYodMyYzr6FKffoegdrUDjxq0AiATAFxh5ytQST5F_SZon5fQZ2AhYMpThps7u'
+        });
+    }
+
+    function Search() {
+        if (!searchManager) {
+            //Create an instance of the search manager and perform the search.
+            Microsoft.Maps.loadModule('Microsoft.Maps.Search', function () {
+                searchManager = new Microsoft.Maps.Search.SearchManager(map);
+                Search()
+            });
+        } else {
+            //Remove any previous results from the map.
+            map.entities.clear();
+
+            //Get the users query and geocode it.
+			
+            var query = '{{$user->direccion}}';
+            geocodeQuery(query);
+        }
+    }
+	
 	
 
-(function() {
-  var map, mapOptions, marker, position;
+    function geocodeQuery(query) {
+        var searchRequest = {
+            where: query,
+            callback: function (r) {
+                if (r && r.results && r.results.length > 0) {
+                    var pin, pins = [], locs = [], output = 'Results:<br/>';
 
-  position = new google.maps.LatLng(51.5001985, -0.0900256);
+                    for (var i = 0; i < r.results.length; i++) {
+                        //Create a pushpin for each result. 
+                        pin = new Microsoft.Maps.Pushpin(r.results[i].location, {
+                            text: i + ''
+                        });
+                        pins.push(pin);
+                        locs.push(r.results[i].location);
 
-  mapOptions = {
-    zoom: 14,
-    center: position,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
+                        output += i + ') ' + r.results[i].name + '<br/>';
+                    }
 
-  map = new google.maps.Map($('#map')[0], mapOptions);
+                    //Add the pins to the map
+                    map.entities.push(pins);
 
-  marker = new google.maps.Marker({
-    position: position,
-    map: map
-  });
+                    //Display list of results
+                    
 
-  marker.setMap(map);
+                    //Determine a bounding box to best view the results.
+                    var bounds;
 
-}).call(this);
-</script>
+                    if (r.results.length == 1) {
+                        bounds = r.results[0].bestView;
+                    } else {
+                        //Use the locations from the results to calculate a bounding box.
+                        bounds = Microsoft.Maps.LocationRect.fromLocations(locs);
+                    }
+
+                    map.setView({ bounds: bounds });
+                }
+            },
+            errorCallback: function (e) {
+                //If there is an error, alert the user about it.
+                alert("No results found.");
+            }
+        };
+
+        //Make the geocode request.
+        searchManager.geocode(searchRequest);
+    }
+	
+	
+
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
+
 @endsection

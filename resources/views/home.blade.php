@@ -188,6 +188,36 @@
 	}
 	
 	
+	.ClienteLibros{
+		
+		margin-right: 40%;
+		text-decoration: none;
+	}
+	
+	a{
+		text-decoration: none;
+		color: black !important;
+		display: relative;
+		
+	}
+	
+	.iconosTabla{
+		margin-right: 20px;
+	}
+	
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </style>
 
 @extends('layouts.head')
@@ -205,6 +235,10 @@
     <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
     
     <li class="sidebar-list"><a href="/pdf"><img src="https://www.avanzadi.com/wp-content/uploads/2019/06/03_icono-inventario.png"  width="40" height="40" /><br>Inventario</a></li>
+	  
+	<li class="sidebar-list"><a href="/libros"><br>Libros</a></li>
+	  
+	<li class="sidebar-list"><a href="/editoriales"><br>Editoriales</a></li>
     
    
   </ul>
@@ -229,6 +263,10 @@
 
 <div class="containerReservas">
 	
+<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 
 
                     <table id='example' class="table table-striped">
@@ -258,17 +296,17 @@
 
 								@endif
 								
-								<td>{{$r->fecha_reserva}}</td>
+								<td style="vertical-align:middle;"><i class="material-icons iconosTabla">date_range</i>{{$r->fecha_reserva}}</td>
 								  
-								<td>
-									<a href="{{url('/reservas')}}/{{$r->id_users}}"  class="btn btn-primary" >Cliente</a>
-									<a href="{{route('LibroUsuario', $r->id_reserva)}}" class="btn btn-success">Libros</a>
+								<td style="vertical-align:middle;">
+									<a href="{{url('/reservas')}}/{{$r->id_users}}"><i class="material-icons ClienteLibros">person</i></a>
+									<a href="{{route('LibroUsuario', $r->id_reserva)}}" ><i class="material-icons">library_books</i></a>
 								</td>
 								  
-								<td>{{$r->estado}}</td>       
+								<td style="vertical-align:middle;" contenteditable="true">{{$r->estado}}</td>       
 								
 								  
-								 <td>{{$r->id_reserva}}</td>
+								 <td style="vertical-align:middle;">{{$r->id_reserva}}</td>
 
 							  </tr>
 							
@@ -276,6 +314,8 @@
 							@endforeach
 						</tbody>
 					</table>
+	
+	
 
 </div>
 
@@ -301,6 +341,8 @@ $(document).ready( function () {
 	});
 } );
 </script>
+
+
 
 
 

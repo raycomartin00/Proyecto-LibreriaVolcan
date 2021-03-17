@@ -39,6 +39,7 @@ Route::get('/pdf', function () {
 Route::get('/chart', [App\Http\Controllers\HighchartController::class, 'handleChart']);
 
 Route::resource('/libros', App\Http\Controllers\LibroController::class);
+Route::resource('/editoriales', App\Http\Controllers\EditorialController::class);
 Route::resource('/reservas', App\Http\Controllers\ReservaController::class);
 Route::resource('/insertarLibro', App\Http\Controllers\insertarLibroController::class);
 Route::resource('/insertarEditorial', App\Http\Controllers\insertarEditorialController::class);

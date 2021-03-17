@@ -38,7 +38,7 @@ class insertarLibroController extends Controller
         $libro=$request->all();
 		Libro::create($libro);	
 		
-		return view('insertar.index');
+		return view('libros.index');
     }
 
     /**

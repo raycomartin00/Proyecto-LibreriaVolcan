@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Libro;
+use App\Models\Editorial;
 
-class LibroController extends Controller
+class EditorialController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class LibroController extends Controller
     public function index()
     {
 		
-		$libross = Libro::all();
-        return view('libros.index', compact('libross'));
+		$editorial = Editorial::all();
+        return view('editorial.index', compact('editorial'));
     }
 
     /**
@@ -37,10 +37,10 @@ class LibroController extends Controller
      */
     public function store(Request $request)
     {
-        $libro=$request->all();
-		Libro::create($libro);	
+        $editorial=$request->all();
+		Editorial::create($editorial);	
 		
-		 return redirect('/libros');
+		 return redirect('/editoriales');
     }
 
     /**
@@ -85,10 +85,10 @@ class LibroController extends Controller
      */
     public function destroy($id)
     {
-         $libro = Libro::findOrFail($id);
+         $editorial = Editorial::findOrFail($id);
 		
-         $libro->delete();
+         $editorial->delete();
 
-        return redirect('/libros')->with('completed', 'Student has been deleted');
+        return redirect('/editoriales')->with('completed', 'Student has been deleted');
     }
 }
