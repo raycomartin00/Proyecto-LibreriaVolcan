@@ -174,6 +174,20 @@
 	}
 	
 	
+	
+	.high-light{
+		background: #FFA5A5 !important;
+	}
+	
+	.amarillo{
+		background: #FFD36F !important;
+	}
+	
+	.verde{
+		background: #D1F7D5 !important;
+	}
+	
+	
 </style>
 
 @extends('layouts.head')
@@ -217,35 +231,48 @@
 	
 
 
-                    <table class="table table-bordered table-striped" id='example'>
+                    <table id='example' class="table table-striped">
 						<thead>
 							<tr>
-
-								<th>Numero Reserva</th>
+								
+								
 								<th>Fecha De La Reserva</th>
-								<th>Datos Del Cliente</th>
-								<th>Libros</th>
+								<th>Datos Del Cliente Y Reserva</th>
+								<th>Estado</th>
+								<th>Numero Reserva</th>
+								
 							</tr>
 						</thead>
 						<tbody>
 							@foreach($reservas as $r)
-							  <tr>
+							 
+								@if($r->estado =='Pendiente')     
+									<tr class="high-light">
 
-								<td>{{$r->id_reserva}}</td>
+								@elseif($r->estado =='Avisado')
+									<tr class="amarillo">
+										
+								@elseif($r->estado =='Recogido')
+									<tr class="verde">		
+								@else
 
-
+								@endif
+								
 								<td>{{$r->fecha_reserva}}</td>
 								  
 								<td>
-									<a  href="{{url('/reservas')}}/{{$r->id_users}}"  class="btn btn-primary" >Cliente</a>
-								</td>
-								  
-								<td>
+									<a href="{{url('/reservas')}}/{{$r->id_users}}"  class="btn btn-primary" >Cliente</a>
 									<a href="{{route('LibroUsuario', $r->id_reserva)}}" class="btn btn-success">Libros</a>
 								</td>
+								  
+								<td>{{$r->estado}}</td>       
+								
+								  
+								 <td>{{$r->id_reserva}}</td>
 
 							  </tr>
-
+							
+									
 							@endforeach
 						</tbody>
 					</table>
@@ -255,14 +282,22 @@
 
 
 
+
+
+
+
+
+
 <script>
 $(document).ready( function () {
 	$('#example').DataTable({
-		"order": [[ 0, "desc" ]],
+		"order": [[ 0, '' ], [ 1, '' ], [ 2, '' ], [ 3, 'desc' ]],
 		"lengthMenu": [[12, 25, 50, -1], [12, 25, 50, "All"]],
 		"language": {
 		  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
-		}
+		},
+		 "stripeClasses": [],
+		
 	});
 } );
 </script>
