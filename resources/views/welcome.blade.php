@@ -1,27 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="es">  
   <head>    
     <title>Título de la WEB</title>    
     <meta charset="UTF-8">
     <meta name="title" content="Título de la WEB">
-    <meta name="description" content="Descripción de la WEB">      
+    <meta name="description" content="Descripción de la WEB">  
+	  
   </head> 
 	
 	<style>
 	
-*,html{
-scroll-behavior: smooth;
-}
-:root{
-  scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
-  scrollbar-width: thin !important;
-}
+
 body{
 margin:0;
 overflow-x:hidden;
 width:100%;
-font-family: 'Kanit', sans-serif;
+
 }
+		
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 /*DEFAULT*/
 p{
@@ -36,9 +34,7 @@ padding:5px;
 }
 .title{
 font-size:2em;
-font-family: 'Comic Sans MS';
--webkit-text-stroke: 1px black;
-
+font-family: "Poppins", sans-serif !important;
 color: white;
 font-size: xxx-large;
 }
