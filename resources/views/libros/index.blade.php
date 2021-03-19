@@ -11,6 +11,7 @@
 		padding: 20px;
 		width: 85%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		
 	}
 	
 	
@@ -278,6 +279,18 @@
 		border-radius: 3px !important;
 	}
 	
+	.botonEdit{
+		outline: none !important;
+		background: #CBE9FA !important;
+		border: 0px !important;
+		border-radius: 3px !important;
+		color: black !important;
+		height: 50px !important;
+		padding-top: 10px;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	
 	
 	
 </style>
@@ -295,13 +308,13 @@
 	  <br><br> <br><br>
     <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
     
-	 <li class="sidebar-list"><a href="/insertar"><img src="https://e1.pngegg.com/pngimages/1019/842/png-clipart-light-dock-icons-folder-folder-icon.png"  width="40" height="40" /><br>Insertar</a></li> 
 	  
     <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
     
-    <li class="sidebar-list"><a href="/pdf"><img src="https://www.avanzadi.com/wp-content/uploads/2019/06/03_icono-inventario.png"  width="40" height="40" /><br>Inventario</a></li>
 	  
-	<li class="sidebar-list"><a href="/libros"><br>Libros</a></li>
+	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
+	  
+	<li class="sidebar-list"><a href="/editoriales"><img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170605846/80929907-ilustraci%C3%B3n-del-edificio-hist%C3%B3rico-vector-icono-blanco-con-suave-sombra-sobre-fondo-transparente-.jpg" width="40" height="40"><br>Editoriales</a></li>
     
    
   </ul>
@@ -345,6 +358,7 @@
 								@method('DELETE')
 								<button  type="submit" class="boton"><i class="material-icons">delete_forever</i></button>
 							 </form>
+							<a  class="botonEdit" href="{{ route('libros.edit', $l->id_libro)}}" title="Editar Libro"><i class="material-icons">edit</i></a>
 							  
 							  
 							  </td>
@@ -395,20 +409,26 @@
 			<br>
 			<div class="input-field">
 						<i class="material-icons prefix">perm_identity</i>
-						<label for="nombre">Nombre</label>
+						<label for="nombre">Nombre</label><br>
 						<input type="text" name="nombre" size="35" required>
 			</div>
 			<br>
 			<div class="input-field">
 						<i class="material-icons prefix">person_pin</i>
-						<label for="id_editorial">Editorial</label>
+						<label for="id_editorial">Editorial</label><br>
 						<input type="number" name="id_editorial"  required>
 			</div>
 			<br>
 			<div class="input-field">
+						<i class="material-icons prefix">person_pin</i>
+						<label for="imagen">Imagen</label><br>
+						<input type="file" name="imagen" id="imagen" required>
+			</div>
+			<br>
+			<div class="input-field">
 						<i class="material-icons prefix">mode_edit</i>
-						<label for="observaciones">Observaciones</label><br><br>
-						<textarea name="observaciones" rows="3" cols="50" class="materialize-textarea"   length="140" required></textarea>
+						<label for="observaciones">Observaciones</label><br>
+						<textarea name="observaciones" rows="3" cols="40" class="materialize-textarea"   length="140" required></textarea>
 			</div>
 
 				@csrf

@@ -100,7 +100,8 @@ class ReservaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $reserva = Reserva::findOrFail($id);
+        return view('editar.reserva', compact('reserva'));
     }
 
     /**
@@ -112,7 +113,10 @@ class ReservaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $reserva = $request->except(['_token', '_method']);
+		
+		Reserva::whereid_reserva($id)->update($reserva);
+        return redirect('/home');
     }
 
     /**
@@ -123,6 +127,10 @@ class ReservaController extends Controller
      */
     public function destroy($id)
     {
-        //
+          $reserva = Reserva::findOrFail($id);
+		
+         $reserva->delete();
+
+        return redirect('/home');
     }
 }

@@ -190,13 +190,14 @@
 	  <br><br> <br><br>
     <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
     
-	 <li class="sidebar-list"><a href="/insertar"><img src="https://c0.klipartz.com/pngpicture/842/515/gratis-png-directorio-de-iconos-de-computadora-porta-carpetas.png"  width="40" height="40" /><br>Insertar</a></li> 
+
 	  
     <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
     
-    <li class="sidebar-list"><a href="/pdf"><img src="https://www.avanzadi.com/wp-content/uploads/2019/06/03_icono-inventario.png"  width="40" height="40" /><br>Inventario</a></li>
     
-   
+   	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
+	  
+	<li class="sidebar-list"><a href="/editoriales"><img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170605846/80929907-ilustraci%C3%B3n-del-edificio-hist%C3%B3rico-vector-icono-blanco-con-suave-sombra-sobre-fondo-transparente-.jpg" width="40" height="40"><br>Editoriales</a></li>
   </ul>
 </div>
 

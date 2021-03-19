@@ -194,7 +194,7 @@
 		text-decoration: none;
 	}
 	
-	a{
+	a i{
 		text-decoration: none;
 		color: black !important;
 		display: relative;
@@ -203,6 +203,19 @@
 	
 	.iconosTabla{
 		margin-right: 20px;
+	}
+	
+	#blanco{
+		color: white !important;
+	}
+	
+	.boton{
+		height: 30px !important;
+		width: 40px !important;
+		outline: none !important;
+ 		text-decoration: none !important;
+		border: 0px !important;
+		 background-color: Transparent !important;
 	}
 	
 	
@@ -223,6 +236,8 @@
 @extends('layouts.head')
 
 @section('content')
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 <div id="sidebar" style="top:initial;right:initial;" class='menu'>
   <ul id="nav-container">
@@ -230,15 +245,13 @@
 	  <br><br> <br><br>
     <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
     
-	 <li class="sidebar-list"><a href="/insertar"><img src="https://e1.pngegg.com/pngimages/1019/842/png-clipart-light-dock-icons-folder-folder-icon.png"  width="40" height="40" /><br>Insertar</a></li> 
 	  
     <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
     
-    <li class="sidebar-list"><a href="/pdf"><img src="https://www.avanzadi.com/wp-content/uploads/2019/06/03_icono-inventario.png"  width="40" height="40" /><br>Inventario</a></li>
 	  
-	<li class="sidebar-list"><a href="/libros"><br>Libros</a></li>
+	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
 	  
-	<li class="sidebar-list"><a href="/editoriales"><br>Editoriales</a></li>
+	<li class="sidebar-list"><a href="/editoriales"><img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170605846/80929907-ilustraci%C3%B3n-del-edificio-hist%C3%B3rico-vector-icono-blanco-con-suave-sombra-sobre-fondo-transparente-.jpg" width="40" height="40"><br>Editoriales</a></li>
     
    
   </ul>
@@ -278,6 +291,7 @@
 								<th>Datos Del Cliente Y Reserva</th>
 								<th>Estado</th>
 								<th>Numero Reserva</th>
+								<th>Acción</th>
 								
 							</tr>
 						</thead>
@@ -299,14 +313,23 @@
 								<td style="vertical-align:middle;"><i class="material-icons iconosTabla">date_range</i>{{$r->fecha_reserva}}</td>
 								  
 								<td style="vertical-align:middle;">
-									<a href="{{url('/reservas')}}/{{$r->id_users}}"><i class="material-icons ClienteLibros">person</i></a>
-									<a href="{{route('LibroUsuario', $r->id_reserva)}}" ><i class="material-icons">library_books</i></a>
+									<a href="{{url('/reservas')}}/{{$r->id_users}}" title="Ver Cliente"><i class="material-icons ClienteLibros">person</i></a>
+									<a href="{{route('LibroUsuario', $r->id_reserva)}}" title="Ver Libros"><i class="material-icons">library_books</i></a>
 								</td>
 								  
-								<td style="vertical-align:middle;" contenteditable="true">{{$r->estado}}</td>       
+								<td style="vertical-align:middle;">{{$r->estado}}</td>       
 								
 								  
 								 <td style="vertical-align:middle;">{{$r->id_reserva}}</td>
+										
+								<td>
+									<form action="{{ route('reservas.destroy', $r->id_reserva)}}" method="post" style="display: inline-block">
+										@csrf
+										@method('DELETE')
+										<button  type="submit" class="boton" title="Eliminar Reserva"><i class="material-icons">delete_forever</i></button>
+									 </form>
+									<a href="{{ route('reservas.edit', $r->id_reserva)}}" title="Editar Reserva"><i class="material-icons">edit</i></a>
+								</td>
 
 							  </tr>
 							
@@ -314,6 +337,15 @@
 							@endforeach
 						</tbody>
 					</table>
+	
+
+	
+	
+
+	
+	
+	
+	
 	
 	
 
@@ -332,7 +364,7 @@
 $(document).ready( function () {
 	$('#example').DataTable({
 		"order": [[ 0, '' ], [ 1, '' ], [ 2, '' ], [ 3, 'desc' ]],
-		"lengthMenu": [[12, 25, 50, -1], [12, 25, 50, "All"]],
+		"lengthMenu": [[9, 25, 50, -1], [9, 25, 50, "All"]],
 		"language": {
 		  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
 		},
@@ -340,6 +372,36 @@ $(document).ready( function () {
 		
 	});
 } );
+
+	
+$(document).ready(function() {
+			toastr.options = {
+			
+				'positionClass': 'toast-top-right',
+				
+				'showDuration': '4000',
+				'hideDuration': '1000',
+				'timeOut': '5000',
+				'extendedTimeOut': '4000',
+				
+			}
+		});	
+	
+	
+	
+$('.boton').click(function(event) {
+			toastr.options = {
+			
+				'positionClass': 'toast-top-right',
+				
+				'showDuration': '4000',
+				'hideDuration': '1000',
+				'timeOut': '5000',
+				'extendedTimeOut': '4000',
+				
+			}
+			toastr.error('La reserva se ha eliminado');
+});
 </script>
 
 

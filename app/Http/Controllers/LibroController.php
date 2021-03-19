@@ -36,9 +36,17 @@ class LibroController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+		
     {
-        $libro=$request->all();
-		Libro::create($libro);	
+		
+		$libro = Libro::create($request->all());
+		
+		if($request->hasFile('imagen')){
+            $request->imagen = $request->imagen->move(public_path('images'));
+        }
+		
+		$libro->save();
+		
 		
 		 return redirect('/libros');
     }
@@ -62,7 +70,8 @@ class LibroController extends Controller
      */
     public function edit($id)
     {
-        //
+         $libro = Libro::findOrFail($id);
+         return view('editar.libros', compact('libro'));
     }
 
     /**
@@ -74,7 +83,10 @@ class LibroController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $libro = $request->except(['_token', '_method']);
+		
+		Libro::whereid_libro($id)->update($libro);
+        return redirect('/libros');
     }
 
     /**

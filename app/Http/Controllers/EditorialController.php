@@ -62,7 +62,8 @@ class EditorialController extends Controller
      */
     public function edit($id)
     {
-        //
+        $editorial = Editorial::findOrFail($id);
+         return view('editar.editorial', compact('editorial'));
     }
 
     /**
@@ -74,7 +75,10 @@ class EditorialController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $editorial = $request->except(['_token', '_method']);
+		
+		Editorial::whereid_editorial($id)->update($editorial);
+        return redirect('/editoriales');
     }
 
     /**

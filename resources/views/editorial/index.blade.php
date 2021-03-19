@@ -278,6 +278,18 @@
 		border-radius: 3px !important;
 	}
 	
+	.botonEdit{
+		outline: none !important;
+		background: #CBE9FA !important;
+		border: 0px !important;
+		border-radius: 3px !important;
+		color: black !important;
+		height: 50px !important;
+		padding-top: 10px;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	
 	
 	
 </style>
@@ -295,13 +307,15 @@
 	  <br><br> <br><br>
     <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
     
-	 <li class="sidebar-list"><a href="/insertar"><img src="https://e1.pngegg.com/pngimages/1019/842/png-clipart-light-dock-icons-folder-folder-icon.png"  width="40" height="40" /><br>Insertar</a></li> 
+
 	  
     <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
     
-    <li class="sidebar-list"><a href="/pdf"><img src="https://www.avanzadi.com/wp-content/uploads/2019/06/03_icono-inventario.png"  width="40" height="40" /><br>Inventario</a></li>
+
 	  
-	<li class="sidebar-list"><a href="/libros"><br>Libros</a></li>
+	  	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
+	  
+	<li class="sidebar-list"><a href="/editoriales"><img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170605846/80929907-ilustraci%C3%B3n-del-edificio-hist%C3%B3rico-vector-icono-blanco-con-suave-sombra-sobre-fondo-transparente-.jpg" width="40" height="40"><br>Editoriales</a></li>
     
    
   </ul>
@@ -355,6 +369,8 @@
 								@method('DELETE')
 								<button  type="submit" class="boton"><i class="material-icons">delete_forever</i></button>
 							 </form>
+							
+							<a class="botonEdit" href="{{ route('editoriales.edit', $e->id_editorial)}}" title="Editar Editorial"><i class="material-icons">edit</i></a>
 							  
 							  
 							  </td>
@@ -373,7 +389,7 @@
 	</button>
 	<br><br>
 	
-	<input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
+	<input type="button" class="btnAtras" onclick="history.back()" name="volver" value="Cancelar">
 	
 	
 	
@@ -405,43 +421,43 @@
 				
 				<div class="input-field">
 							<i class="material-icons prefix">perm_identity</i>
-							<label for="nombre">Nombre</label>
-							<input type="text" name="nombre" size="50" required>
+							<label for="nombre">Nombre</label><br>
+							<input type="text" name="nombre" size="40" required>
 				</div>
 				
 				<div class="input-field">
 							<i class="material-icons prefix">navigation</i>
-							<label for="direccion">Direcciรณn</label>
+							<label for="direccion">Direccion</label><br>
 							<input type="text" name="direccion" required>
 				</div>
 				
 				<div class="input-field">
 							<i class="material-icons prefix">markunread</i>
-							<label for="cod_postal">Cรณdigo Postal</label>
+							<label for="cod_postal">Codigo Postal</label><br>
 							<input type="number" name="cod_postal" required>
 				</div>
 				
 				<div class="input-field">
 							<i class="material-icons prefix">phone</i>
-							<label for="telefono">Telefono</label>
+							<label for="telefono">Telefono</label><br>
 							<input type="number" name="telefono" required>
 				</div>
 				
 				<div class="input-field">
 							<i class="material-icons prefix">person</i>
-							<label for="persona_encargada">Persona Encargada</label>
+							<label for="persona_encargada">Persona Encargada</label><br>
 							<input type="text" name="persona_encargada" required>
 				</div>
 				
 				<div class="input-field">
 							<i class="material-icons prefix">mode_edit</i>
-							<label for="observaciones">Observaciones</label>
-							<textarea name="observaciones" rows="10" class="materialize-textarea"  length="140" required></textarea>
+							<label for="observaciones">Observaciones</label><br>
+							<textarea name="observaciones" rows="4" cols="40" class="materialize-textarea"  length="140" required></textarea>
 				</div>
 
 					@csrf
 				<br>
-				<p class="center-align">
+				<p class="center-align" align="center">
 				  <button type="submit" class="btn btn-dark">Guardar Editorial</button>
 				</p>
 			</form>

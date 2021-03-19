@@ -8,23 +8,24 @@
     <meta name="description" content="Descripción de la WEB">  
 	  
   </head> 
-	
+
 	<style>
 	
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+		
 
 body{
 margin:0;
 overflow-x:hidden;
 width:100%;
+font-family: 'Comfortaa', cursive !important;
 
 }
 		
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 /*DEFAULT*/
-p{
-font-family: 'Kanit', sans-serif;
-}
+
 a{
 text-decoration:none;
 }
@@ -34,13 +35,20 @@ padding:5px;
 }
 .title{
 font-size:2em;
-font-family: "Poppins", sans-serif !important;
 color: white;
+font-family: 'Comfortaa', cursive !important;
 font-size: xxx-large;
+}
+		
+.title2{
+font-size:2em;
+color: black;
+font-family: 'Comfortaa', cursive !important;
+font-size: xx-large !important;
+
 }
 .sub-title{
 font-size:1em;
-font-family: 'Kanit', sans-serif;
 color:gray;
 }
 em{
@@ -64,6 +72,7 @@ height: 80px !important;
 width: 25% !important;
 margin-left: 38%;
 margin-top: -3%;
+padding-top: 30px;
 
 }
 
@@ -226,9 +235,9 @@ header{
 
 .topnav .logo{
 float:left;
-font-family: 'Comic Sans MS';
 color:#fff;
 font-size:2em;
+font-family: 'Comfortaa', cursive !important;
 
 }
 
@@ -252,7 +261,6 @@ font-size:2em;
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 
@@ -367,7 +375,6 @@ float:left;
   color: #000;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 
@@ -770,7 +777,7 @@ padding:20px 0px;
 }
 
 .footer section{
-width:20%;
+width:100%;
 padding:2%;
 display:inline-block;
 }
@@ -905,7 +912,6 @@ color:#fff;
 }
 
 .main-timeline{
-    font-family: sans-serif;
     position: relative;
     width:90%;
     margin:auto;
@@ -926,7 +932,6 @@ color:#fff;
 }
 .main-timeline .timeline ul li:before{
 content:"\f0a4";
-font-family:"FontAwesome";
 margin:0px 5px;
 }
 
@@ -1095,7 +1100,7 @@ margin:0px 5px;
 @media screen and (max-width:567px){
     .main-timeline .title{ font-size: 18px; }
     .main-timeline{
-    font-family: sans-serif;
+  
     position: relative;
     width:75%;
     margin:auto;
@@ -1282,7 +1287,7 @@ h2{
 	
 <div class="topnav" id="myTopnav">
 
-  <a class="logo"><img src="/img/logolibreriafinal.png" width="50" height="37"> LIBRERÍA PAPELERÍA VOLCÁN</a>
+  <a class="logo"><img src="/img/logolibreriafinal.png" width="50" height="37"> Librería Papelería Volcán</a>
 
 	@if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -1295,15 +1300,14 @@ h2{
                     @endauth
                 </div>
             @endif
-  <a href="/MAHESHBYL/details/mdOmWZG">Contacto</a>
-  <a href="about.html">Sobre Nosotros</a>
+  
   
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </header>
 <div id="navbar">
 <div class="slide-menu">
-  <a class="logo">LIBRERÍA PAPELERÍA VOLCÁN</a>
+  <a class="logo">Libreía Papelería Volcán</a>
  
 @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -1315,8 +1319,7 @@ h2{
                     @endauth
                 </div>
             @endif
-   <a href="https://codepen.io/MAHESHBYL/details/mdOmWZG">Contacto</a>
-  <a href="about.html">Sobre Nosotros</a>
+
    
 </div>
 </div>
@@ -1329,7 +1332,7 @@ h2{
 <tr>
 	
 <td>
-	<div align="center"><h1 class="title">Y TÚ ¿QUIERES ESTAR TRANQUILO?</h1></div>
+	<div align="center"><h1 class="title">Y tú ¿Quieres estar tranquilo?</h1></div>
 	<div align="center"><h2>Reserva ya tus libros de texto y no esperes hasta el final</h2></div>
 <section>
 	
@@ -1347,16 +1350,16 @@ h2{
 <!--CARDS-->
 <section class="section0" id="sections">
 <div class="card banner">
-<h1 class="title">¿Qué Ofrecemos?</h1>
+<h1 class="title2">¿Qué Ofrecemos?</h1>
 
 </div>
 <div class="card inline-photo show-on-scroll">
 <i class="fa fa-handshake-o"></i>
-<h3>Excelente atención al cliente</h3>
+<h3>Reserva tus libros</h3>
 </div>
 <div class="card inline-photo show-on-scroll">
 <i class="fa fa-thumbs-up"></i>
-<h3>Recruiting Services</h3>
+<h3>Chat de ayuda</h3>
 </div>
 <div class="card inline-photo show-on-scroll">
 <i class="fa fa-line-chart"></i>
@@ -1378,25 +1381,22 @@ h2{
 
 
 <section class="slick" id="moreaboutus">
-<div class="banner">
-	<br>
-	<h1 class="title">How You Can Benifit </h1>
-	</div>
+
 	<table>
 	<tr>
 		<td>
 		<ul>
 		<li>
-		<h3>Discovery phase </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		<h3>Redes Sociales</h3>
+		<p>Instagram y Facebook para que no pierdas detalle de las novedades</p>
 		</li>
 		<li>
-		<h3>Effective development methodologies </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		<h3>Pedidos a Domicilio</h3>
+		<p>Disponemos de pedidos a domicilio, solo contáctanos</p>
 		</li>
 		<li>
-		<h3>Favorable timezone and cultural closeness </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		<h3>Mejores Precios</h3>
+		<p>Buenos precios en todos los productos </p>
 		</li>
 		</ul>
 		</td>
@@ -1410,16 +1410,16 @@ h2{
 		<td>
 		<ul>
 		<li>
-		<h3>Centres of Excellence </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h3>Equipo con años de experiencia </h3>
+		<p>Equipo formado con trabajdores con mas de 20 años de experiencia</p>
 		</li>
 		<li>
-		<h3>Clear, timely communication </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h3>Exelente atención al cliente</h3>
+		<p>Excelente trato al cliente en todos los sentidos</p>
 		</li>
 		<li>
-		<h3>Quick and easy start </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		<h3>Chat de Ayuda</h3>
+		<p>Chat de ayuda con el fin de resolver las posibles dudas a la hora de la reserva de libros</p>
 		</li>
 		</ul>
 		</td>
@@ -1438,23 +1438,7 @@ h2{
 <div class="footer">
 
 
-<section>
-<p class="title">OTHER LINKS</p>
-<p><a href="#">Ticket</a></p>
-<p><a href="#">Terms & Conditions</a></p>
-<p><a href="#">Cookie Policy</a></p>
-<p><a href="#">Privacy Policy</a></p>
-</section>
-
-<section>
-<p class="title">SHORT CUT</p>
-<p><a href="https://codepen.io/MAHESHBYL/details/mdOmWZG">Contact Us</a></p>
-<p><a href="#">Services</a></p>
-<p><a href="#">About Us</a></p>
-<p><a href="#">Our Fields</a></p>
-</section>
-
-<section>
+<section align="center">
 
 <p><a title="Address, Country, Pincode"><i class="fa fa-map-marker"></i></a> <a href="#"><i class="fa fa-phone"></i></a> <a href="#"><i class="fa fa-envelope"></i></a></p>
 </section>
