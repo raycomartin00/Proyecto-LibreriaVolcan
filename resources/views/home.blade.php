@@ -362,6 +362,19 @@
 
 
 <script>
+	
+	
+$(".boton").click(function() {
+	
+	alert("hola");
+  
+});	
+	
+	
+	
+	
+	
+	
 $(document).ready( function () {
 	$('#example').DataTable({
 		"order": [[ 0, '' ], [ 1, '' ], [ 2, '' ], [ 3, 'desc' ]],

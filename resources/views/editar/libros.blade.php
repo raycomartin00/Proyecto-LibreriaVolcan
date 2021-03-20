@@ -85,26 +85,40 @@
 		  <form method="post" action="{{ route('libros.update', $libro->id_libro) }}">
 			   @csrf
               @method('PUT')
-			<div class="row form-group">
-				<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>Nombre</label>
-				<div class="col-md-8">
-				  <input type="text" name="nombre" id="name" class="form-control" required value='{{$libro->nombre}}'>
+				<div class="row form-group">
+					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>Nombre</label>
+					<div class="col-md-8">
+					  <input type="text" name="nombre" id="name" class="form-control" required value='{{$libro->nombre}}'>
+					</div>
+				  </div>
+
+				  <div class="row form-group">
+					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>ISBN</label>
+					<div class="col-md-8">
+					  <input type="text" name="isbn" id="name" class="form-control" required value='{{$libro->isbn}}'>
+					</div>
+				  </div>
+
+				<div class="row form-group">
+					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i> Editorial</label>
+					<div class="col-md-8">
+					  <input type="text" name="id_editorial" id="name" class="form-control" required value='{{$libro->id_editorial}}'>
+					</div>
+				  </div>
+
+				  <div class="row form-group">
+					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i> Precio</label>
+					<div class="col-md-8">
+					  <input type="text" name="precio" id="name" class="form-control" required value='{{$libro->precio}}'>
+					</div>
+				  </div>
+
+				<div class="row form-group">
+				  <label for="message" class="col-form-label col-md-4"> <i class="material-icons">mode_edit</i>   Observaciones</label>
+				  <div class="col-md-8">
+					<textarea name="observaciones" id="message" class="form-control" rows="3">{{$libro->observaciones}}</textarea>
+				  </div>
 				</div>
-			  </div>
-		  
-			<div class="row form-group">
-				<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i> Editorial</label>
-				<div class="col-md-8">
-				  <input type="text" name="id_editorial" id="name" class="form-control" required value='{{$libro->editorial->nombre}}'>
-				</div>
-			  </div>
-			
-			<div class="row form-group">
-			  <label for="message" class="col-form-label col-md-4"> <i class="material-icons">mode_edit</i>   Observaciones</label>
-			  <div class="col-md-8">
-				<textarea name="observaciones" id="message" class="form-control" rows="3">{{$libro->observaciones}}</textarea>
-			  </div>
-			</div>
 			
 			<div class="d-flex justify-content-center pt-3 mt-3">
 			  <button type="submit" class="btn btn-info btn-block btn-send">Guardar</button>
@@ -113,7 +127,7 @@
 			
 		</div>	
 			
-		<br>
+		<br><br><br><br><br>
 	
 <input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
 </div>

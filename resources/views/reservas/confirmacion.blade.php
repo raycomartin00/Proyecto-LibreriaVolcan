@@ -11,17 +11,18 @@ body{
 		padding: 20px;
 		width: 80%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		border-radius: 10px !important;
 	}
 	
 	
 	
 	.btnAtras{
-	  width: auto !important;
-	  background-color: #000 !important;
+	  width: 90px !important;
+	  background-color: #686868 !important;
 	  border: none !important;
 	  outline: none !important;
-	  height: auto !important;
-	  border-radius: 49px !important;
+	  height: 50px !important;
+	  border-radius: 10px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
 	  font-weight: 600 !important;
@@ -216,7 +217,7 @@ body{
 	
 	
 <br>
-<button href="{{ url('/home') }}" class="btnAtras">inicio</button>
+<button onClick="history.go(-2)" class="btnAtras">inicio</button>
 
 </div>
 
