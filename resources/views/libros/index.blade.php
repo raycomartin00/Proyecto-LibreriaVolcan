@@ -331,9 +331,11 @@
 
 
 							<th>id</th>
+							<th>ISBN</th>
 							<th>Nombre</th>
 							<th>Observaciones</th>
 							<th>Editorial</th>
+							<th>Precio</th>
 							<th>Acciones</th>
 
 						</tr>
@@ -344,13 +346,13 @@
 						  <tr>
 
 							<td style="vertical-align:middle;">{{$l->id_libro}}</td> 
-
+							<td style="vertical-align:middle;">{{$l->isbn}}</td>
 							<td style="vertical-align:middle;">{{$l->nombre}}</td>
 
 							<td style="vertical-align:middle;">{{$l->observaciones}}</td>
 
 							<td style="vertical-align:middle;">{{$l->Editorial->nombre}}</td>
-							  
+							 <td style="vertical-align:middle;">{{$l->precio}}</td> 
 							  <td style="vertical-align:middle;">
 							  
 							<form action="{{ route('libros.destroy', $l->id_libro)}}" method="post" style="display: inline-block">
@@ -421,8 +423,20 @@
 			<br>
 			<div class="input-field">
 						<i class="material-icons prefix">person_pin</i>
+						<label for="isbn">ISBN</label><br>
+						<input type="text" name="isbn"  required>
+			</div>
+			<br>
+			<div class="input-field">
+						<i class="material-icons prefix">person_pin</i>
+						<label for="precio">Precio</label><br>
+						<input type="number" name="precio"  required>
+			</div>
+			<br>
+			<div class="input-field">
+						<i class="material-icons prefix">person_pin</i>
 						<label for="imagen">Imagen</label><br>
-						<input type="file" name="imagen" id="imagen" required>
+						<input type="file" name="imagen" id="imagen">
 			</div>
 			<br>
 			<div class="input-field">

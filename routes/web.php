@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/confirmacion', function () {
+    return view('reservas.confirmacion');
+});
+
 Route::get('/user', [App\Http\Controllers\HomeController::class, 'getUser']);
 
 Route::get('qrcode', function () {

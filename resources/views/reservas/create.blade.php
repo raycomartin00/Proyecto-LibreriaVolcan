@@ -109,8 +109,10 @@ input:checked[type="checkbox"]::before {
 							<tr>
 
 								<th>Selecciona</th>
+								<th>ISBN</th>
 								<th>Nombre</th>
 								<th>Editorial</th>
+								<th>Precio</th>
 								<th>Imagen</th>
 							</tr>
 						</thead>
@@ -120,11 +122,13 @@ input:checked[type="checkbox"]::before {
 
 								<td><input name='libros[]' type="checkbox" value="{{$l->id_libro}}"></td> 
 
-								<td>{{$l->nombre}}</td>
+								
+								  <td>{{$l->isbn}}</td>
+								  <td>{{$l->nombre}}</td>
 
 
 								<td>{{$l->Editorial->nombre}}</td>
-
+									 <td>{{$l->precio}} Euros</td>
 								  <td><img src='{{$l->imagen}}' width="100" height="100"></td>
 
 							  </tr>

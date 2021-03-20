@@ -72,10 +72,14 @@ class ReservaController extends Controller
 		
 		$user = Auth::user()->email;
 		
-		Mail::to('raycomartin00@gmail.com')->send(new \App\Mail\TestMail($details));
-		Mail::to($user)->send(new \App\Mail\TestMail($confirmacion));
+		//Mail::to('raycomartin00@gmail.com')->send(new \App\Mail\TestMail($details));
+		//Mail::to($user)->send(new \App\Mail\TestMail($confirmacion));
 		
-		return redirect()->route('reservas.index');
+		$libros = ReservaXLibro::where('id_reserva', $reserva->id_reserva)->get();
+      
+		
+		
+		return view('reservas.confirmacion', compact("libros"));
     }
 
     /**
@@ -128,9 +132,7 @@ class ReservaController extends Controller
     public function destroy($id)
     {
           $reserva = Reserva::findOrFail($id);
-		
-         $reserva->delete();
-
-        return redirect('/home');
+          $reserva->delete();
+          return redirect('/home');
     }
 }

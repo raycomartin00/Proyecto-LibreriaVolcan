@@ -148,7 +148,7 @@
 		margin-top: -150px;
 	}
 	.chartReservas{
-		width: 700px;
+		width: 40%;
 		height: 800px;
 		display: flex;
 		margin-left: 10%;
@@ -158,20 +158,20 @@
 	}
 	
 	.chartUsers{
-		width: 750px;
+		width: 40%;
 		height: 370px;
 		display: flex;
-		margin-left: 50%;
+		margin-left: 55%;
 		margin-top: -800px;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		background: white !important;
 		padding: 20px;
 	}
 	.chartReservasXUsers{
-		width: 750px;
+		width: 40%;
 		height: 370px;
 		display: flex;
-		margin-left: 50%;
+		margin-left: 55%;
 		margin-top: 60px;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		background: white !important;

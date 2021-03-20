@@ -13,7 +13,7 @@ class Libro extends Model
 	protected $primaryKey = 'id_libro';
 	public $timestamps = false;
 	protected $table = 'Libros';
-	protected $fillable = ['nombre', 'observaciones', 'id_editorial', 'imagen'];
+	protected $fillable = ['nombre', 'observaciones', 'id_editorial', 'imagen', 'isbn', 'precio'];
 	
 	
 	 public function Editorial()

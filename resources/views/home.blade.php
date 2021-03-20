@@ -221,7 +221,9 @@
 	
 
 
-
+	.nuevo{
+		background: red !important;
+	}
 	
 	
 	
@@ -291,7 +293,7 @@
 								<th>Datos Del Cliente Y Reserva</th>
 								<th>Estado</th>
 								<th>Numero Reserva</th>
-								<th>Acción</th>
+								<th>Acciรณn</th>
 								
 							</tr>
 						</thead>
@@ -332,7 +334,6 @@
 								</td>
 
 							  </tr>
-							
 									
 							@endforeach
 						</tbody>
@@ -402,6 +403,10 @@ $('.boton').click(function(event) {
 			}
 			toastr.error('La reserva se ha eliminado');
 });
+	
+	
+	
+
 </script>
 
 

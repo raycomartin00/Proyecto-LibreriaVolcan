@@ -33,7 +33,7 @@
     margin: 10px 0 !important;
     cursor: pointer !important;
     transition: 0.5s !important;
-}
+	}
 	
 	.image-container{
 		width: 100% !important;
