@@ -11,6 +11,7 @@
 		padding: 20px;
 		width: 85%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		
 	}
 	
 	
@@ -215,7 +216,7 @@
 	  border: none !important;
 	  outline: none !important;
 	  height: 49px !important;
-	  border-radius: 10px !important;
+	  border-radius: 49px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
 	  font-weight: 600 !important;
@@ -307,13 +308,11 @@
 	  <br><br> <br><br>
     <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
     
-
 	  
     <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
     
-
 	  
-	  	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
+	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
 	  
 		<li class="sidebar-list"><a href="/editoriales"><img src="/img/editorial.png" width="60" height="40"><br>Editoriales</a></li>
 	  
@@ -335,48 +334,37 @@
 
 							<th>id</th>
 							<th>Nombre</th>
+							<th>Apellidos</th>
+							<th>DNI</th>
 							<th>Direccion</th>
-							<th>Códifo Postal</th>
-							<th>Teléfono</th>
-							<th>Persona Encargada</th>
-							<th>Observaciones</th>
+							<th>Telefono</th>
+							<th>Email</th>
 							<th>Acciones</th>
-							
 
 						</tr>
 					</thead>
 					<tbody>
 
-						@foreach($editorial as $e)
+						@foreach($user as $u)
 						  <tr>
 
-							<td style="vertical-align:middle;">{{$e->id_editorial}}</td> 
+							<td style="vertical-align:middle;">{{$u->id}}</td> 
+							<td style="vertical-align:middle;">{{$u->name}}</td>
+							<td style="vertical-align:middle;">{{$u->apellidos}}</td>
 
-							<td style="vertical-align:middle;">{{$e->nombre}}</td>
+							<td style="vertical-align:middle;">{{$u->dni}}</td>
 
-							<td style="vertical-align:middle;">{{$e->direccion}}</td>
-
-							<td style="vertical-align:middle;">{{$e->cod_postal}}</td>
-							  
-							<td style="vertical-align:middle;">{{$e->telefono}}</td>
-							  
-							 <td style="vertical-align:middle;">{{$e->persona_encargada}}</td>
-							  
-							 <td style="vertical-align:middle;">{{$e->observaciones}}</td>
-							  
-							  <td style="vertical-align:middle;">
-							  
-							<form action="{{ route('editoriales.destroy', $e->id_editorial)}}" method="post" style="display: inline-block">
-								@csrf
-								@method('DELETE')
-								<button  type="submit" class="boton"><i class="material-icons">delete_forever</i></button>
-							 </form>
-							
-							<a class="botonEdit" href="{{ route('editoriales.edit', $e->id_editorial)}}" title="Editar Editorial"><i class="material-icons">edit</i></a>
-							  
-							  
-							  </td>
-
+							<td style="vertical-align:middle;">{{$u->direccion}}</td>
+							 <td style="vertical-align:middle;">{{$u->telefono}}</td> 
+							   <td style="vertical-align:middle;">{{$u->email}}</td> 
+							  <td>
+								  <form action="{{ route('usuarios.destroy', $u->id)}}" method="post" style="display: inline-block">
+									@csrf
+									@method('DELETE')
+									<button  type="submit" class="boton"><i class="material-icons">delete_forever</i></button>
+								 </form>
+								<a  class="botonEdit" href="{{ route('usuarios.edit', $u->id)}}" title="Editar Libro"><i class="material-icons">edit</i></a>
+								</td>
 						  </tr>
 
 						@endforeach
@@ -384,14 +372,10 @@
 						
 
 				</table>
-	
-	<br>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-	   Crear Nueva Editorial
-	</button>
+
 	<br><br>
 	
-
+	
 	
 	
 	
@@ -402,75 +386,6 @@
 
 
 
-
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" >
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">INSERTAR EDITORIAL</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-     
-  
-			
-		<form method="POST" action="{{ route('editoriales.store')}}">			  
-					  @csrf
-
-				
-				<div class="input-field">
-							<i class="material-icons prefix">perm_identity</i>
-							<label for="nombre">Nombre</label><br>
-							<input type="text" name="nombre" size="40" required>
-				</div>
-				
-				<div class="input-field">
-							<i class="material-icons prefix">navigation</i>
-							<label for="direccion">Direccion</label><br>
-							<input type="text" name="direccion" required>
-				</div>
-				
-				<div class="input-field">
-							<i class="material-icons prefix">markunread</i>
-							<label for="cod_postal">Codigo Postal</label><br>
-							<input type="number" name="cod_postal" required>
-				</div>
-				
-				<div class="input-field">
-							<i class="material-icons prefix">phone</i>
-							<label for="telefono">Telefono</label><br>
-							<input type="number" name="telefono" required>
-				</div>
-				
-				<div class="input-field">
-							<i class="material-icons prefix">person</i>
-							<label for="persona_encargada">Persona Encargada</label><br>
-							<input type="text" name="persona_encargada" required>
-				</div>
-				
-				<div class="input-field">
-							<i class="material-icons prefix">mode_edit</i>
-							<label for="observaciones">Observaciones</label><br>
-							<textarea name="observaciones" rows="4" cols="40" class="materialize-textarea"  length="140" required></textarea>
-				</div>
-
-					@csrf
-				<br>
-				<p class="center-align" align="center">
-				  <button type="submit" class="btn btn-dark">Guardar Editorial</button>
-				</p>
-			</form>
-	  
-		  
-      
-
-
-    </div>
-  </div>
-</div>
 
 
 

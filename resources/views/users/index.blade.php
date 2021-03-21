@@ -168,7 +168,22 @@ a:hover {
   border: none !important;
   outline: none !important;
   height: auto !important;
-  border-radius: 49px !important;
+  border-radius: 10px !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  margin: 10px 0 !important;
+  cursor: pointer !important;
+  transition: 0.5s !important;
+}	
+	
+	.btnCancelar {
+  width: 100px !important;
+  background-color: #686868 !important;
+  border: none !important;
+  outline: none !important;
+  height: 50px !important;
+  border-radius: 10px !important;
   color: #fff !important;
   text-transform: uppercase !important;
   font-weight: 600 !important;
@@ -176,6 +191,8 @@ a:hover {
   cursor: pointer !important;
   transition: 0.5s !important;
 }
+	
+	
 	
 	.direccion{
 		margin-right: 20px;
@@ -297,7 +314,8 @@ a:hover {
                                                      
                 </tbody>
             </table>
-				<input type="button" class="btn btn-primary" onclick="history.back()" name="volver atrás" value="Cancelar">
+				<br>
+				<input type="button" class="btnCancelar btn-primary" onclick="history.back()" name="volver atrás" value="Cancelar">
             </div>
         </div>
 		

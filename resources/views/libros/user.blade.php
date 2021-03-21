@@ -47,10 +47,10 @@ input:checked[type="checkbox"]::before {
 	
 	.btn {
 	  width: auto !important;
-	  background-color: #ff7125 !important;
+	  background-color: #686868 !important;
 	  border: none !important;
 	  outline: none !important;
-	  height: 49px !important;
+	  height: 10px !important;
 	  border-radius: 49px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
@@ -67,11 +67,11 @@ input:checked[type="checkbox"]::before {
 	
 		.btnAtras{
 	  width: 120px !important;
-	  background-color: #000 !important;
+	  background-color: #686868 !important;
 	  border: none !important;
 	  outline: none !important;
 	  height: 49px !important;
-	  border-radius: 49px !important;
+	  border-radius: 10px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
 	  font-weight: 600 !important;
@@ -97,7 +97,9 @@ input:checked[type="checkbox"]::before {
 					<tr>
 
 						<th>Id Libro</th>
+						<th>ISBN</th>
 						<th>Nombre</th>
+						<th>Precio</th>
 						<th>Editorial</th>
 						<th>Imagen</th>
 					</tr>
@@ -107,12 +109,12 @@ input:checked[type="checkbox"]::before {
 					  <tr>
 
 						<td>{{$l->libro->id_libro}}</td>
-
+						<td>{{$l->libro->isbn}}</td>
 						<td>{{$l->libro->nombre}}</td>
-
+						<td>{{$l->libro->precio}} Euros</td>	
 						<td>{{$l->libro->Editorial->nombre}}</td>
 						  
-						  <td><img src='{{$l->libro->imagen}}' width="80" height="80"></td>
+						  <td><img src='{{$l->libro->imagen}}' width="70" height="70"></td>
 
 					  </tr>
 

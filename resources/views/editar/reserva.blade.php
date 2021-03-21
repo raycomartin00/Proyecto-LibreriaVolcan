@@ -11,7 +11,7 @@
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		text-align: center;
 		height: auto !important;
-		background-image: url("https://image.freepik.com/foto-gratis/accesorios-escolares-colores-esquina-fondo-blanco_23-2148050642.jpg");
+		background: white !important;
 		background-repeat: no-repeat;
 		 background-size: 100% 100%;
 		
@@ -32,11 +32,11 @@
 	
 	.btnAtras{
 	  width: 120px !important;
-	  background-color: #000 !important;
+	  background-color: #686868 !important;
 	  border: none !important;
 	  outline: none !important;
 	  height: 49px !important;
-	  border-radius: 49px !important;
+	  border-radius: 10px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
 	  font-weight: 600 !important;

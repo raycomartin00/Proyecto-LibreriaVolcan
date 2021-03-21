@@ -216,7 +216,7 @@
 	  border: none !important;
 	  outline: none !important;
 	  height: 49px !important;
-	  border-radius: 49px !important;
+	  border-radius: 10px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
 	  font-weight: 600 !important;
@@ -314,7 +314,9 @@
 	  
 	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
 	  
-	<li class="sidebar-list"><a href="/editoriales"><img src="https://previews.123rf.com/images/asmati/asmati1706/asmati170605846/80929907-ilustraci%C3%B3n-del-edificio-hist%C3%B3rico-vector-icono-blanco-con-suave-sombra-sobre-fondo-transparente-.jpg" width="40" height="40"><br>Editoriales</a></li>
+		<li class="sidebar-list"><a href="/editoriales"><img src="/img/editorial.png" width="60" height="40"><br>Editoriales</a></li>
+	  
+	  <li class="sidebar-list"><a href="/usuarios"><img src="/img/people.png" width="40" height="40"><br>Usuarios</a></li>
     
    
   </ul>
@@ -379,7 +381,7 @@
 	</button>
 	<br><br>
 	
-	<input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
+
 	
 	
 	

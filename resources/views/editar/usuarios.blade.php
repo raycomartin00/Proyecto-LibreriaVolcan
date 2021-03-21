@@ -9,11 +9,11 @@
 		padding: 50px;
 		width: 60%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
-		background: white !important;
 		text-align: center;
 		height: auto !important;
+		background: white !important;
 		background-repeat: no-repeat;
-		 background-size: 100% 100%;
+		background-size: 100% 100%;
 		
 	}
 	
@@ -32,7 +32,7 @@
 	
 	.btnAtras{
 	  width: 120px !important;
-	 background-color: #686868 !important;
+	  background-color: #686868 !important;
 	  border: none !important;
 	  outline: none !important;
 	  height: 49px !important;
@@ -76,49 +76,58 @@
 	<div class="container1">
 		
 	
-		  <h1 class="display-4">Editar Libro Nº {{$libro->id_libro}}</h1>
+		  <h1 class="display-4">Editar Usuario Nº {{$user->id}}</h1>
 		  <hr class="bg-success">
 
 			
 			
 			
-		  <form method="post" action="{{ route('libros.update', $libro->id_libro) }}">
+		  <form method="post" action="{{ route('usuarios.update', $user->id) }}">
 			   @csrf
               @method('PUT')
 				<div class="row form-group">
 					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>Nombre</label>
 					<div class="col-md-8">
-					  <input type="text" name="nombre" id="name" class="form-control" required value='{{$libro->nombre}}'>
+					  <input type="text" name="name" id="name" class="form-control" required value='{{$user->name}}'>
 					</div>
 				  </div>
 
 				  <div class="row form-group">
-					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>ISBN</label>
+					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>Apellidos</label>
 					<div class="col-md-8">
-					  <input type="text" name="isbn" id="name" class="form-control" required value='{{$libro->isbn}}'>
+					  <input type="text" name="apellidos" id="name" class="form-control" required value='{{$user->apellidos}}'>
 					</div>
 				  </div>
 
 				<div class="row form-group">
-					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i> Editorial</label>
+					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i>DNI</label>
 					<div class="col-md-8">
-					  <input type="text" name="id_editorial" id="name" class="form-control" required value='{{$libro->id_editorial}}'>
+					  <input type="text" name="dni" id="name" class="form-control" required value='{{$user->dni}}'>
 					</div>
 				  </div>
 
 				  <div class="row form-group">
-					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i> Precio</label>
+					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i>Telefono</label>
 					<div class="col-md-8">
-					  <input type="text" name="precio" id="name" class="form-control" required value='{{$libro->precio}}'>
+					  <input type="text" name="telefono" id="name" class="form-control" required value='{{$user->telefono}}'>
+					</div>
+				  </div>
+			  
+			    <div class="row form-group">
+					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i>Direccion</label>
+					<div class="col-md-8">
+					  <input type="text" name="direccion" id="name" class="form-control" required value='{{$user->direccion}}'>
+					</div>
+				  </div>
+			  
+			    <div class="row form-group">
+					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i>Email</label>
+					<div class="col-md-8">
+					  <input type="text" name="email" id="name" class="form-control" required value='{{$user->email}}'>
 					</div>
 				  </div>
 
-				<div class="row form-group">
-				  <label for="message" class="col-form-label col-md-4"> <i class="material-icons">mode_edit</i>   Observaciones</label>
-				  <div class="col-md-8">
-					<textarea name="observaciones" id="message" class="form-control" rows="3">{{$libro->observaciones}}</textarea>
-				  </div>
-				</div>
+				
 			
 			<div class="d-flex justify-content-center pt-3 mt-3">
 			  <button type="submit" class="btn btn-info btn-block btn-send">Guardar</button>
