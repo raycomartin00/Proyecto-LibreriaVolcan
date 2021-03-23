@@ -2,7 +2,8 @@
 
 <style>
 
-	
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
 	.containerReservas{
 		
 		margin-left: 20%;
@@ -19,6 +20,7 @@
 	
 	body{
 		background-image: url("/img/headerlibros2.jpg") !important;
+		font-family: 'Comfortaa', cursive !important;
 	}
 	
 	.container1{
@@ -60,6 +62,10 @@
 		border: 0px !important;
 	}
 	
+	.display-4{
+		font-size: 2.5em !important;
+	}
+	
 	
 
 </style>
@@ -95,14 +101,14 @@
 				  <div class="row form-group">
 					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>Apellidos</label>
 					<div class="col-md-8">
-					  <input type="text" name="apellidos" id="name" class="form-control" required value='{{$user->apellidos}}'>
+					  <input type="text" name="apellidos" id="name" class="form-control"  value='{{$user->apellidos}}'>
 					</div>
 				  </div>
 
 				<div class="row form-group">
 					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i>DNI</label>
 					<div class="col-md-8">
-					  <input type="text" name="dni" id="name" class="form-control" required value='{{$user->dni}}'>
+					  <input type="text" name="dni" id="name" class="form-control"  value='{{$user->dni}}'>
 					</div>
 				  </div>
 
@@ -116,7 +122,7 @@
 			    <div class="row form-group">
 					<label for="name" class="col-form-label col-md-4"> <i class="material-icons">person_pin</i>Direccion</label>
 					<div class="col-md-8">
-					  <input type="text" name="direccion" id="name" class="form-control" required value='{{$user->direccion}}'>
+					  <input type="text" name="direccion" id="name" class="form-control"  value='{{$user->direccion}}'>
 					</div>
 				  </div>
 			  

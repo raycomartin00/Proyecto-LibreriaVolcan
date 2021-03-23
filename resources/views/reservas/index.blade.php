@@ -161,6 +161,47 @@
 	.carousel-gallery{
 		height: 35% !important;
 	}
+	
+	.container2{
+		width: 100%;
+		height: 400px;
+		background: white;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		padding: 100px;
+		
+		
+		
+	}
+	
+	.misReservas{
+		background: white;
+		width: 20%;
+		height: 200px;
+		display: inline-block;
+		margin-left: 10%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+
+	
+	}
+	
+	.miPerfil{
+		background: white;
+		width: 20%;
+		height: 200px;
+		display: inline-block;
+		margin-left: 10%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+
+	}
+	
+	.Tercero{
+		background: white;
+		width: 20%;
+		height: 200px;
+		display: inline-block;
+		margin-left: 10%;
+		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;	
+	}
 
 
 
@@ -260,9 +301,11 @@
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
 
-<div class="container">
+
+
     
-                
+     
+
 
 	
 	<!-- Load Facebook SDK for JavaScript -->
@@ -291,6 +334,17 @@
   logged_in_greeting="Hola! Cรณmo podemos ayudarte?"
   logged_out_greeting="Hola! Cรณmo podemos ayudarte?">
       </div>
+
+
+
+
+<div class="container2">
+	
+	<div class="misReservas"></div>
+	<div class="miPerfil"></div>
+	<div class="Tercero"></div>
+	
+</div>
 @endsection
 	
 	

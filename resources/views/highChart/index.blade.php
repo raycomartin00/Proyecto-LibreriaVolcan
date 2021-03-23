@@ -1,7 +1,10 @@
 <style type="text/css">
 	
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+	
 	html, body{
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Comfortaa', cursive !important;
   padding:0px;
   margin:0px;
 }#sidebar-container{

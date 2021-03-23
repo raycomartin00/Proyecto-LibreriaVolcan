@@ -1,8 +1,9 @@
 
 <style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 	
 	html, body{
-  font-family: 'Overpass', sans-serif;
+ font-family: 'Comfortaa', cursive !important;
   padding:0px;
   margin:0px;
 }#sidebar-container{
@@ -238,6 +239,7 @@
 @extends('layouts.head')
 
 @section('content')
+	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
@@ -294,8 +296,8 @@
 								<th>Fecha De La Reserva</th>
 								<th>Datos Del Cliente Y Reserva</th>
 								<th>Estado</th>
-								<th>Numero Reserva</th>
-								<th>Acciรณn</th>
+								<th>Nยบ Reserva</th>
+								<th>Acciones</th>
 								
 							</tr>
 						</thead>

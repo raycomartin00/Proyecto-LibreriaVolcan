@@ -1,4 +1,6 @@
 <style>
+	
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 	body{
 		background-image: url("/img/headerlibros2.jpg");
@@ -17,7 +19,7 @@
 	
 	
 		html, body{
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Comfortaa', cursive !important;
   padding:0px;
   margin:0px;
 }#sidebar-container{

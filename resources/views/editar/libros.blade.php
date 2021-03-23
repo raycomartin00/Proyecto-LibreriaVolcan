@@ -2,7 +2,8 @@
 
 <style>
 
-	
+		@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
 	.containerReservas{
 		
 		margin-left: 20%;
@@ -19,6 +20,7 @@
 	
 	body{
 		background-image: url("/img/headerlibros2.jpg") !important;
+		font-family: 'Comfortaa', cursive !important;
 	}
 	
 	.container1{
@@ -60,6 +62,11 @@
 		border: 0px !important;
 	}
 	
+	
+		.display-4{
+			font-size: 2.5em !important;
+		}
+
 	
 
 </style>

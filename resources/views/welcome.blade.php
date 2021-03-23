@@ -1228,6 +1228,7 @@ font-size: 50pt !important;
 h2{
 	color: white;
 }
+
 	
 	</style>
 	
@@ -1363,7 +1364,7 @@ h2{
 </div>
 <div class="card inline-photo show-on-scroll">
 <i class="fa fa-line-chart"></i>
-<h3>Precios de Escándalo</h3>
+<h3>Mejores Precios</h3>
 </div>
 <div class="card inline-photo show-on-scroll">
 <i class="fa fa-users"></i>

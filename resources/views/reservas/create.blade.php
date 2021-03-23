@@ -26,7 +26,7 @@
   
 	input[type="checkbox"] {
     position: relative;
-    width: 40px;
+    width: 50px;
     height: 20px;
     -webkit-appearance: none;
     background: #c6c6c6;
@@ -36,7 +36,7 @@
     transition: .5s;
 }
 input:checked[type="checkbox"] {
-    background: #03a9f4;
+    background: #FCAD2C;
 }
 input[type="checkbox"]::before {
     content: '';
@@ -75,7 +75,7 @@ input:checked[type="checkbox"]::before {
 	  border: none !important;
 	  outline: none !important;
 	  height: 49px !important;
-	  border-radius: 49px !important;
+	  border-radius: 10px !important;
 	  color: #fff !important;
 	  text-transform: uppercase !important;
 	  font-weight: 600 !important;
@@ -87,6 +87,66 @@ input:checked[type="checkbox"]::before {
 	.btn:hover {
 	  background-color: #FCAD2C !important;
 	}
+	
+	
+	
+	 .cards tbody tr {
+            float: left;
+            width: 19rem;
+            margin: 0.5rem;
+            border: 0.0625rem solid rgba(0,0,0,.125);
+    	    border-radius: .25rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.25);
+        }
+        .cards tbody td {
+            display: block;
+        }
+        .table tbody label {
+            display: none;
+        }
+        .cards tbody label {
+        	display: inline;
+        	position: relative;
+        	font-size: 85%;
+        	top: -0.5rem;
+        	float: left;
+        	color: #808080;
+        	min-width: 4rem;
+        	margin-left: 0;
+        	margin-right: 1rem;
+        	text-align: left;
+        }
+        tr.selected label {
+            color: #404040;
+        }
+        
+        .table .fa {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .cards .fa {
+            font-size: 7.5rem;
+        }
+	
+	.table td .table th {
+		border-top: 0px solid !important;
+	}
+	
+	.table-bordered td {
+		border: 0px solid !important;
+	}
+	
+	tr{
+		text-align: center;
+		
+	}
+	
+	table.dataTable tbody tr{
+		margin-left: 3% !important;
+		margin-top: 1%;
+	}
+	
+	
 </style>
 
 @extends('layouts.head')
@@ -97,12 +157,16 @@ input:checked[type="checkbox"]::before {
 
 <div class="containerLibros">
 	
-
+ <div class="card-header">
+    RESERVAS DE LIBROS 2020/2021
+  </div>
+	
+	<br>
                     
 				<form method='POST' action="{{route('reservas.store')}}">
 					
 					@csrf
-					<table class='table table-bordered table-striped'  id='example'>
+					<table class='table table-bordered  '  id='example'>
 
 						
 						<thead>
@@ -111,7 +175,6 @@ input:checked[type="checkbox"]::before {
 								<th>Selecciona</th>
 								<th>ISBN</th>
 								<th>Nombre</th>
-								<th>Editorial</th>
 								<th>Precio</th>
 								<th>Imagen</th>
 							</tr>
@@ -120,16 +183,13 @@ input:checked[type="checkbox"]::before {
 							@foreach($libros as $l)
 							  <tr>
 
-								<td><input name='libros[]' type="checkbox" value="{{$l->id_libro}}"></td> 
-
-								
-								  <td>{{$l->isbn}}</td>
-								  <td>{{$l->nombre}}</td>
-
-
-								<td>{{$l->Editorial->nombre}}</td>
-									 <td>{{$l->precio}} Euros</td>
-								  <td><img src='{{$l->imagen}}' width="100" height="100"></td>
+								<td><img src='{{$l->imagen}}' width="250" height="250"></td>
+								  <td><b>ISBN: </b>{{$l->isbn}}</td>
+								  <td><b>Nombre: </b>{{$l->nombre}}</td>
+								<td><b>Precio: </b>{{$l->precio}} €</td>
+								 
+								  
+								  <td><input name='libros[]' type="checkbox" value="{{$l->id_libro}}"></td> 
 
 							  </tr>
 
@@ -144,9 +204,10 @@ input:checked[type="checkbox"]::before {
 					
 					
 			    </form>
-                   
-    </div> 
 
+            
+    </div> 
+       <br><br>
 
 <!-- Load Facebook SDK for JavaScript -->
       <div id="fb-root"></div>
@@ -180,12 +241,19 @@ input:checked[type="checkbox"]::before {
 $(document).ready( function () {
 	$('#example').DataTable({
 		"order": [[ 0, "desc" ]],
-		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+		"lengthMenu": [[12, 25, 50, -1], [12, 25, 50, "All"]],
 		"language": {
 		  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
 		}
 	});
 } );
+	
+	
+	
+$(document).ready( function () {
+                $("#example").toggleClass('cards')
+                $("#example thead").toggle()
+ });
 </script>
 @endsection
 

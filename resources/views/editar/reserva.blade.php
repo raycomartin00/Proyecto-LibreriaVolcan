@@ -2,7 +2,13 @@
 
 <style>
 
-	
+		@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+		html, body{
+		  font-family: 'Comfortaa', cursive !important;
+		  padding:0px;
+		  margin:0px;
+		}
 	.containerReservas{
 		
 		margin-left: 20%;
@@ -60,6 +66,10 @@
 		border: 0px !important;
 	}
 	
+	.display-4{
+		font-size: 2.5em !important;
+	}
+	
 	
 
 </style>
@@ -114,7 +124,7 @@ Fecha de la Reserva</label>
 			
 		</div>	
 			
-		<br>
+		<br><br><br>
 	
 <input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
 </div>

@@ -1,7 +1,11 @@
 <style>
+	
+		@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
 
 	body{
 		background-image: url("/img/headerlibros2.jpg");
+		font-family: 'Comfortaa', cursive !important;
 	}
 	
 	
