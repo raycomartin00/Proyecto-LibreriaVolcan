@@ -60,8 +60,7 @@ class ReservaController extends Controller
 		
 		$details = [
 			'title'=> 'Nueva Reserva',
-			'body'=> 'Han realizado una nueva reserva'
-			
+			'body'=> 'Han realizado una nueva reserva'	
 		];
 		
 		$confirmacion = [
@@ -93,7 +92,6 @@ class ReservaController extends Controller
         $user=User::find($id);
 		return view('users.index', compact("user"));
 		
-		
     }
 
     /**
@@ -118,7 +116,6 @@ class ReservaController extends Controller
     public function update(Request $request, $id)
     {
         $reserva = $request->except(['_token', '_method']);
-		
 		Reserva::whereid_reserva($id)->update($reserva);
         return redirect('/home');
     }

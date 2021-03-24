@@ -7,7 +7,7 @@
 	.containerReservas{
 		
 		margin-left: 20%;
-		padding: 50px;
+		padding: 50px;  
 		width: 60%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		text-align: center;

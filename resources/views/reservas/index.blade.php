@@ -70,7 +70,7 @@
 	
 	
 	.text-container{
-		margin-top: 10% !important;
+		margin-top: 4% !important;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		background: white !important;
 		padding: 20px;
@@ -164,44 +164,45 @@
 	
 	.container2{
 		width: 100%;
-		height: 400px;
+		height: auto;
 		background: white;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
-		padding: 100px;
+		padding: 50px;
+		display: inline-block;
 		
 		
 		
 	}
 	
 	.misReservas{
-		background: white;
+		background-image: url("/img/headerlibros2.jpg");
+		background-size: 30% 30%;
+		background-repeat: no-repeat;
 		width: 20%;
+		min-width: 250px;
 		height: 200px;
 		display: inline-block;
 		margin-left: 10%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		margin-top: 50px;
 
 	
 	}
 	
-	.miPerfil{
-		background: white;
-		width: 20%;
-		height: 200px;
-		display: inline-block;
-		margin-left: 10%;
-		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
-
+	.misReservas:hover{
+		transform: scale(1.1);
 	}
 	
-	.Tercero{
-		background: white;
-		width: 20%;
-		height: 200px;
-		display: inline-block;
-		margin-left: 10%;
-		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;	
+	a{
+		text-decoration: none;
 	}
+	
+	
+	
+	
 
 
 
@@ -340,9 +341,11 @@
 
 <div class="container2">
 	
-	<div class="misReservas"></div>
-	<div class="miPerfil"></div>
-	<div class="Tercero"></div>
+	<a id="link" href="/ReservasUsuario"><div class="misReservas" ><img src="/img/reserva.png" width="100" height="100"><br><br>Mis Reservas</div></a>
+	<a href="{{url('/reservas')}}/{{Auth::user()->id}}"><div class="misReservas"><img src="/img/user.png" width="100" height="100" class="imgDatos"><br><br>Mis Datos</div></a>
+	<div class="misReservas"><img src="/img/cita.png" width="100" height="100">
+		<br><br>"-"</div>
+
 	
 </div>
 @endsection

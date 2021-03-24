@@ -320,7 +320,7 @@
 	  
 		<li class="sidebar-list"><a href="/editoriales"><img src="/img/editorial.png" width="60" height="40"><br>Editoriales</a></li>
 	  
-	  <li class="sidebar-list"><a href="/usuarios"><img src="/img/people.png" width="40" height="40"><br>Usuarios</a></li>
+	  <li class="sidebar-list"><a href="/usuarios"><img src="/img/people.png" width="40" height="40"><br>Clientes</a></li>
     
    
   </ul>
@@ -328,7 +328,11 @@
 
 <div class="containerReservas">
                     
-					
+  <div class="card-header">
+    CLIENTES
+  </div>
+	
+	<br>				
 				<table id='example' class="table">
 						
 						

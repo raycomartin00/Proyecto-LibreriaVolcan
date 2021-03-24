@@ -243,42 +243,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
-<div id="sidebar" style="top:initial;right:initial;" class='menu'>
-  <ul id="nav-container">
-	  
-	  <br><br> <br><br>
-    <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
-    
-	  
-    <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
-    
-	  
-	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
-	  
-	<li class="sidebar-list"><a href="/editoriales"><img src="/img/editorial.png" width="60" height="40"><br>Editoriales</a></li>
-	  
-	  <li class="sidebar-list"><a href="/usuarios"><img src="/img/people.png" width="40" height="40"><br>Clientes</a></li>
-    
-   
-  </ul>
-</div>
 
-
-<!--
-<div class='utils'>
-	
-	<div class="card-header">{{ __('UTILIDADES') }}</div>
-	
-	<div class='div-button'>
-		<button class="btn btn-primary" onclick="window.location.href='/pdf'">INVENTARIO PDF</button>
-	</div>
-	<div class='div-button'>
-		<button class="btn btn-primary" onclick="window.location.href='/qrcode'">QR</button>
-	</div>
-	
-	
-</div>
--->
 
 <div class="containerReservas">
 	
@@ -303,7 +268,7 @@
 								<th>Datos Del Cliente Y Reserva</th>
 								<th>Estado</th>
 								<th>Nยบ Reserva</th>
-								<th>Acciones</th>
+								
 								
 							</tr>
 						</thead>
@@ -325,7 +290,6 @@
 								<td style="vertical-align:middle;"><i class="material-icons iconosTabla">date_range</i>{{$r->fecha_reserva}}</td>
 								  
 								<td style="vertical-align:middle;">
-									<a href="{{url('/reservas')}}/{{$r->id_users}}" title="Ver Cliente"><i class="material-icons ClienteLibros">person</i></a>
 									<a href="{{route('LibroUsuario', $r->id_reserva)}}" title="Ver Libros"><i class="material-icons">library_books</i></a>
 								</td>
 								  
@@ -334,14 +298,7 @@
 								  
 								 <td style="vertical-align:middle;">{{$r->id_reserva}}</td>
 										
-								<td>
-									<form action="{{ route('reservas.destroy', $r->id_reserva)}}" method="post" style="display: inline-block">
-										@csrf
-										@method('DELETE')
-										<button  type="submit" class="boton" title="Eliminar Reserva"><i class="material-icons">delete_forever</i></button>
-									 </form>
-									<a href="{{ route('reservas.edit', $r->id_reserva)}}" title="Editar Reserva"><i class="material-icons">edit</i></a>
-								</td>
+								
 
 							  </tr>
 									
@@ -374,12 +331,7 @@
 <script>
 	
 	
-$(".boton").click(function() {
-	
-	alert("hola");
-  
-});	
-	
+
 	
 	
 	
@@ -398,34 +350,8 @@ $(document).ready( function () {
 } );
 
 	
-$(document).ready(function() {
-			toastr.options = {
-			
-				'positionClass': 'toast-top-right',
-				
-				'showDuration': '4000',
-				'hideDuration': '1000',
-				'timeOut': '5000',
-				'extendedTimeOut': '4000',
-				
-			}
-		});	
 	
-	
-	
-$('.boton').click(function(event) {
-			toastr.options = {
-			
-				'positionClass': 'toast-top-right',
-				
-				'showDuration': '4000',
-				'hideDuration': '1000',
-				'timeOut': '5000',
-				'extendedTimeOut': '4000',
-				
-			}
-			toastr.error('La reserva se ha eliminado');
-});
+
 	
 	
 	
