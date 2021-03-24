@@ -103,7 +103,7 @@
 				<div class="col-md-8">
 				  <input type="text" name="direccion" id="name" class="form-control" required value='{{$editorial->direccion}}'>
 				</div>
-			  </div>
+			 </div>
 			  
 			  <div class="row form-group">
 				<label for="name" class="col-form-label col-md-4"> <i class="material-icons">markunread</i>Código Postal</label>

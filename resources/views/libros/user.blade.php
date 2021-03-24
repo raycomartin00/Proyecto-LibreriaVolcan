@@ -89,10 +89,15 @@ input:checked[type="checkbox"]::before {
 
 @section('content')
 
+<!-- Datatable responsive (añadir estos dos cdn, la clase en table y responsive en script) -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.css"/> 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.js"></script>
+
 
 <div class="containerLibros">
 
-			<table class='table table-bordered table-striped' id='example'>
+			<table class="table table-striped table-bordered nowrap" style="width:100%" id='example'>
 				<thead>
 					<tr>
 
@@ -133,6 +138,7 @@ input:checked[type="checkbox"]::before {
   <script>
 $(document).ready( function () {
 	$('#example').DataTable({
+		responsive: true,
 		"order": [[ 0, "desc" ]],
 		"lengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
 		"language": {

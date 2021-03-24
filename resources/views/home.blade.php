@@ -242,6 +242,8 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.css"/> 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.js"></script>
 
 <div id="sidebar" style="top:initial;right:initial;" class='menu'>
   <ul id="nav-container">
@@ -294,7 +296,7 @@
 
 
 
-                    <table id='example' class="table table-striped">
+                    <table id='example' class="table table-striped table-bordered nowrap" style="width:100%">
 						<thead>
 							<tr>
 								
@@ -387,6 +389,7 @@ $(".boton").click(function() {
 	
 $(document).ready( function () {
 	$('#example').DataTable({
+		responsive: true,
 		"order": [[ 0, '' ], [ 1, '' ], [ 2, '' ], [ 3, 'desc' ]],
 		"lengthMenu": [[9, 25, 50, -1], [9, 25, 50, "All"]],
 		"language": {

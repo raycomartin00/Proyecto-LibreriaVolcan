@@ -170,7 +170,7 @@
 		background: white;
 		margin-left: 10%;
 		padding: 20px;
-		width: 85%;
+		width: 85% !important;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 	}
 	
@@ -244,6 +244,15 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 
 
+<!-- Datatable responsive (añadir estos dos cdn, la clase en table y responsive en script) -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.css"/> 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.js"></script>
+
+
+
+
+
 
 <div class="containerReservas">
 	
@@ -259,7 +268,7 @@
 
 
 
-                    <table id='example' class="table table-striped">
+                    <table id='example' class="table table-striped table-bordered nowrap" style="width:100%">
 						<thead>
 							<tr>
 								
@@ -308,14 +317,6 @@
 	
 
 	
-	
-
-	
-	
-	
-	
-	
-	
 
 </div>
 
@@ -330,32 +331,24 @@
 
 <script>
 	
-	
-
-	
-	
-	
-	
+		
 	
 $(document).ready( function () {
 	$('#example').DataTable({
+		responsive: true,
 		"order": [[ 0, '' ], [ 1, '' ], [ 2, '' ], [ 3, 'desc' ]],
 		"lengthMenu": [[9, 25, 50, -1], [9, 25, 50, "All"]],
 		"language": {
-		  "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+		"url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
 		},
 		 "stripeClasses": [],
+		
 		
 	});
 } );
 
 	
 	
-
-	
-	
-	
-
 </script>
 
 

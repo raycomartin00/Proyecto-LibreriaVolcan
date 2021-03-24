@@ -304,6 +304,8 @@
 @section('content')
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.css"/> 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.js"></script>
 
 
 <div id="sidebar" style="top:initial;right:initial;" class='menu'>
@@ -333,7 +335,7 @@
   </div>
 	
 	<br>				
-				<table id='example' class="table">
+				<table id='example' class="table table-striped table-bordered nowrap" style="width:100%">
 						
 						
 					<thead>
@@ -400,6 +402,7 @@
 <script>
 $(document).ready( function () {
 	$('#example').DataTable({
+		responsive: true,
 		"order": [[ 0, '' ], [ 1, '' ], [ 2, '' ], [ 3, 'desc' ]],
 		"lengthMenu": [[6, 10, 25, -1], [6, 10, 25, "All"]],
 		"language": {
