@@ -154,7 +154,7 @@
 		width: 40%;
 		height: 800px;
 		display: flex;
-		margin-left: 10%;
+		margin-left: 5%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		background: white !important;
 		padding: 20px;
@@ -164,7 +164,7 @@
 		width: 40%;
 		height: 370px;
 		display: flex;
-		margin-left: 55%;
+		margin-left: 50%;
 		margin-top: -800px;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		background: white !important;
@@ -174,12 +174,57 @@
 		width: 40%;
 		height: 370px;
 		display: flex;
-		margin-left: 55%;
+		margin-left: 50%;
 		margin-top: 60px;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		background: white !important;
 		padding: 20px;
 	}
+	
+	.navbar-nav{
+		margin-top: 10px !important;
+	}
+	
+	.navbar-light .navbar-toggler{
+		margin: auto !important;
+		height: auto !important;
+		margin-top: 20px !important;
+	}
+	
+	.navbar-light .navbar-toggler{
+		margin-top: 20px !important;
+	}
+	
+	@media (max-width: 900px) {
+	  .chartReservas {
+		width: 90%;
+		  display: inline-block
+	  }
+		
+		.chartUsers{
+			width: 90%;
+			height: 500px;
+			display: inline-block;
+			margin-left: 5%;
+			margin-top: 50px;
+			box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+			background: white !important;
+			padding: 20px;
+		}
+		
+			.chartReservasXUsers{
+				width: 90%;
+				height: 500px;
+				display: inline-block;
+				margin-left: 5%;
+				margin-top: 50px;
+				box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
+				background: white !important;
+				padding: 20px;
+			}
+		
+	}
+	
 
 </style>
 
@@ -187,24 +232,7 @@
 
 @section('content')
 
-<div id="sidebar" style="top:initial;right:initial;" class='menu'>
-  <ul id="nav-container">
-	  
-	  <br><br> <br><br>
-    <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
-    
 
-	  
-    <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
-    
-    
-   	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
-	  
-		<li class="sidebar-list"><a href="/editoriales"><img src="/img/editorial.png" width="60" height="40"><br>Editoriales</a></li>
-	  
-	  <li class="sidebar-list"><a href="/usuarios"><img src="/img/people.png" width="40" height="40"><br>Clientes</a></li>
-  </ul>
-</div>
 
 
 						

@@ -118,7 +118,7 @@ body{
 </style>
 
 
-@extends('layouts.head')
+@extends('layouts.head2')
 
 @section('content')
 

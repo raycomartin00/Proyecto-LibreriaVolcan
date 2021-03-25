@@ -236,7 +236,7 @@
 	
 </style>
 
-@extends('layouts.head')
+@extends('layouts.head2')
 
 @section('content')
 	<meta charset="UTF-8">

@@ -168,9 +168,9 @@
 	
 	.containerReservas{
 		background: white;
-		margin-left: 10%;
+		margin-left: 5%;
 		padding: 20px;
-		width: 85%;
+		width: 90%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 	}
 	
@@ -226,14 +226,23 @@
 		background: red !important;
 	}
 	
+	.navbar-nav{
+		margin-top: 10px !important;
+	}
+	
+	.navbar-light .navbar-toggler{
+		margin: auto !important;
+		height: auto !important;
+		margin-top: 20px !important;
+	}
+	
+	.navbar-light .navbar-toggler{
+		margin-top: 20px !important;
+	}
 	
 	
 	
-	
-	
-	
-	
-	
+
 </style>
 
 @extends('layouts.head')
@@ -242,28 +251,12 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.css"/> 
 <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.js"></script>
 
-<div id="sidebar" style="top:initial;right:initial;" class='menu'>
-  <ul id="nav-container">
-	  
-	  <br><br> <br><br>
-    <li class="sidebar-list"><a href="/home"><img src="https://segurosncs.com/wp-content/uploads/2017/12/hogar-slide-blanco.png" width="30" height="30"/><br>Inicio</a></li>
-    
-	  
-    <li class="sidebar-list"><a href="/chart"><img src="https://plataformaanticorrupcion.pe/wp-content/uploads/2017/07/estadistica_blanco-1.png"  width="50" height="50"/><br>Estadisticas</a></li>
-    
-	  
-	<li class="sidebar-list"><a href="/libros"><img src="https://www.nicepng.com/png/full/119-1192435_libro-de-reclamaciones-icono-libro-de-reclamaciones.png" width="40" height="40"><br>Libros</a></li>
-	  
-	<li class="sidebar-list"><a href="/editoriales"><img src="/img/editorial.png" width="60" height="40"><br>Editoriales</a></li>
-	  
-	  <li class="sidebar-list"><a href="/usuarios"><img src="/img/people.png" width="40" height="40"><br>Clientes</a></li>
-    
-   
-  </ul>
-</div>
+
 
 
 <!--

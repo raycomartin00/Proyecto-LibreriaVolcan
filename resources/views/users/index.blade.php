@@ -207,6 +207,16 @@ a:hover {
 		left: 40%;
 	}
 	
+	@media (max-width: 760px) {
+		
+		.main-container {
+		
+			height: 1300px
+		}
+	}
+	
+	
+
 	
 	
 	
@@ -214,7 +224,7 @@ a:hover {
 	
 
 </style>
-@extends('layouts.head')
+@extends('layouts.head2')
 
 @section('content')
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

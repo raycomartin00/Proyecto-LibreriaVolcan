@@ -208,7 +208,7 @@
 
 </style>
 
-@extends('layouts.head')
+@extends('layouts.head2')
 
 @section('content')
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />

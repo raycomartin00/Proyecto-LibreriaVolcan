@@ -85,7 +85,7 @@ input:checked[type="checkbox"]::before {
 	}
 </style>
 
-@extends('layouts.head')
+@extends('layouts.head2')
 
 @section('content')
 

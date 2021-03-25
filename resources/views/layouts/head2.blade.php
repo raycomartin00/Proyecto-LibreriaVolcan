@@ -43,14 +43,7 @@
 		.li{
 			margin-left: 10%;
 			text-decoration: none;
-			color: rgba(0,0,0,.5) !important;
 		}
-		
-		a{
-			color: rgba(0,0,0,.5) !important;
-		}
-		
-		
 	</style>
 </head>
 <body>
@@ -66,11 +59,7 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<!-- Left Side Of Navbar -->
 						<ul class="navbar-nav mr-auto">
-							<li class="li"><a href="/home">Inicio</a></li>
-							<li class="li"><a href="/chart">Estadisticas</a></li>
-							<li class="li"><a href="/libros">Libros</a></li>
-							<li class="li"><a href="/editoriales">Editoriales</a></li>
-							<li class="li"><a href="/usuarios">Usuarios</a></li>
+
 						</ul>
 						<!-- Right Side Of Navbar -->
 						<ul class="navbar-nav ml-auto">
