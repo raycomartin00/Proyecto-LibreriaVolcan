@@ -1,3 +1,6 @@
+
+@laravelPWA
+
 <style type="text/css">
   .user
 	{   
@@ -13,11 +16,13 @@
 	.boton{
 		margin: 1%;
 	}
-	
+
 	
 	body{
 		background-image: url("/img/headerlibros2.jpg") !important;
 		background-repeat: no-repeat;
+		
+		
 	}
 	
 	.btn{
@@ -36,37 +41,14 @@
 	}
 	
 	.image-container{
-		width: 100% !important;
-		margin-left: 20%;
+		width: 50% !important;
+		
 	}
 	
 	
 	
 
-	
-	@media (min-width: 1200px) {
-  .container-xl,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container1 {
-    max-width: 80% !important;
-  }
-}
 
-	.container1,
-.container-fluid,
-.container-xl,
-.container-lg,
-.container-md,
-.container-sm {
-  width: 100% !important;
-  padding-right: 15px !important;
-  padding-left: 15px !important;
-  margin-right: auto !important;
-  margin-left: 5% !important;
-  border-radius: 10px !important;
-}
 	
 	
 	.text-container{
@@ -169,6 +151,7 @@
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		padding: 50px;
 		display: inline-block;
+		border-radius: 10px;
 		
 		
 		
@@ -200,6 +183,25 @@
 		text-decoration: none;
 	}
 	
+	@media (min-width: 1200px){
+
+		.container, .container-lg, .container-md, .container-sm, .container-xl {
+   		 max-width: 90% !important;
+		}
+		
+	}
+	
+	@media (max-width: 950px){
+		.image-container {
+			width: 100% !important;
+		}
+	}
+	
+	.col-lg-6{
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+	}
+	
 	
 	
 	
@@ -217,8 +219,12 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+<body>
+	
 
-<div class="container1">
+			<div class="container">
+				
+	
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
@@ -226,12 +232,12 @@
                             <h4 class="p-large" align="center">Reserva los libros antes que nadie</h4>
 							
 									
-
+			
 								<div class="carousel-gallery">
 									<div class="swiper-container">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
-												<a href="https://images.pexels.com/photos/48794/boy-walking-teddy-bear-child-48794.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" data-fancybox="gallery">
+												<a href="" data-fancybox="gallery">
 													<div class="image" style="background-image: url(https://static.carrefour.es/hd_510x_/crs/cdn_static/catalog/hd/358309_00_1.jpg)">
 														<div class="overlay">
 															<em class="mdi mdi-magnify-plus"></em>
@@ -294,18 +300,19 @@
                             <a class="btn" role="button" href="{{route('reservas.create')}}">Reservar Libros</a>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->
-                    <div class="col-lg-6">
+					
+                 
                         <div class="image-container">
                             <img class="img-fluid" src="img/personas.png" alt="alternative" width="800" height="600">
-                        </div> <!-- end of image-container -->
+                        <!-- end of image-container -->
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
-            </div> <!-- end of container -->
+    <!-- end of container -->
 
 
 
-    
-     
+    	</div>
+ 
 
 
 	

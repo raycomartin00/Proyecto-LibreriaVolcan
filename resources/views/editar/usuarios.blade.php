@@ -1,4 +1,4 @@
-
+@laravelPWA
 
 <style>
 
@@ -18,9 +18,16 @@
 		
 	}
 	
-	body{
+	
+	*{
+		
+	}
+	html, body{
 		background-image: url("/img/headerlibros2.jpg") !important;
 		font-family: 'Comfortaa', cursive !important;
+		overflow-x: hidden !important;
+		
+	
 	}
 	
 	.container1{
@@ -65,6 +72,21 @@
 	.display-4{
 		font-size: 2.5em !important;
 	}
+		
+	@media (max-width: 750px){
+
+		.containerReservas{
+			margin-left: 0px !important;
+			width: 100%;
+			border-radius: 20px;
+		}
+
+		.container1{
+			width: 95%;
+			margin-left: 0px !important;
+		}
+
+	}
 	
 	
 
@@ -79,7 +101,7 @@
 <div class="containerReservas">
 
 
-	<div class="container1">
+	
 		
 	
 		  <h1 class="display-4">Editar Usuario Nº {{$user->id}}</h1>
@@ -91,6 +113,9 @@
 		  <form method="post" action="{{ route('usuarios.update', $user->id) }}">
 			   @csrf
               @method('PUT')
+		
+				  
+			
 				<div class="row form-group">
 					<label for="name" class="col-form-label col-md-4">  <i class="material-icons">perm_identity</i>Nombre</label>
 					<div class="col-md-8">
@@ -138,14 +163,14 @@
 			<div class="d-flex justify-content-center pt-3 mt-3">
 			  <button type="submit" class="btn btn-info btn-block btn-send">Guardar</button>
 			</div>
+			
 		  </form>
-			
+			<input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
 		</div>	
-			
-		<br><br><br><br><br>
-	
-<input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
-</div>
+		 	
+		<br><br>
+
+
 
 
 

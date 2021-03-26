@@ -1,3 +1,5 @@
+@laravelPWA
+
 
 <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
@@ -20,6 +22,10 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
 <!-- Bootstrap theme -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
+
+<meta name="viewport" content="width=device-width"/>
+
+
 
 
 <style type="text/css">
@@ -58,6 +64,7 @@ input:checked[type="checkbox"]::before {
 	body{
 		background-image: url("/img/headerlibros2.jpg") !important;
 		background-repeat: no-repeat;
+	
 	}
 	
 	
@@ -87,8 +94,6 @@ input:checked[type="checkbox"]::before {
 	.btn:hover {
 	  background-color: #FCAD2C !important;
 	}
-	
-	
 	
 	 .cards tbody tr {
             float: left;
@@ -146,6 +151,22 @@ input:checked[type="checkbox"]::before {
 		margin-top: 1%;
 	}
 	
+	@media (max-width: 570px) {
+ 		 .cards tbody tr {
+           float: none;
+            width: 16rem;
+            margin: 0.5rem;
+            border: 0.0625rem solid rgba(0,0,0,.125);
+    	    border-radius: .25rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgba(0,0,0,0.25);
+        }
+	}
+	
+	
+	
+
+
+	
 	
 </style>
 
@@ -153,6 +174,9 @@ input:checked[type="checkbox"]::before {
 
 
 @section('content')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.css"/> 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/r-2.2.7/datatables.min.js"></script>
 
 
 <div class="containerLibros">
@@ -166,8 +190,10 @@ input:checked[type="checkbox"]::before {
 				<form method='POST' action="{{route('reservas.store')}}">
 					
 					@csrf
-					<table class='table table-bordered  '  id='example'>
+					<table class="table table-bordered " style="width:100%"  id='example'>
 
+						
+							
 						
 						<thead>
 							<tr>
@@ -192,7 +218,7 @@ input:checked[type="checkbox"]::before {
 								  <td><input name='libros[]' type="checkbox" value="{{$l->id_libro}}"></td> 
 
 							  </tr>
-
+						
 							@endforeach
 						</tbody>
 
@@ -240,6 +266,7 @@ input:checked[type="checkbox"]::before {
 <script>
 $(document).ready( function () {
 	$('#example').DataTable({
+		responsive: true,
 		"order": [[ 0, "desc" ]],
 		"lengthMenu": [[12, 25, 50, -1], [12, 25, 50, "All"]],
 		"language": {
@@ -250,11 +277,24 @@ $(document).ready( function () {
 	
 	
 	
+
+	
+	
+	
+	
+
 $(document).ready( function () {
-                $("#example").toggleClass('cards')
-                $("#example thead").toggle()
+	$("#example").toggleClass('cards')
+	$("#example thead").toggle();
  });
+	
+	
+	
 </script>
+
+
+
+
 @endsection
 
 

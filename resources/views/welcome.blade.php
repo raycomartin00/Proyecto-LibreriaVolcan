@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 <html lang="es">  
-  <head>    
+  <head>   
+	  
     <title>Título de la WEB</title>    
     <meta charset="UTF-8">
     <meta name="title" content="Título de la WEB">
     <meta name="description" content="Descripción de la WEB">  
-	  
+	@laravelPWA
   </head> 
 
 	<style>
@@ -378,11 +379,7 @@ float:left;
   margin: 0;
 }
 
-@media (max-width:600px){
-#navbar{
-display:none;
-}
-}
+
 
 
 
@@ -1228,6 +1225,75 @@ font-size: 50pt !important;
 h2{
 	color: white;
 }
+		
+		
+		
+@media (max-width:600px){
+	
+	#navbar{
+	display:none;
+	}
+	
+	.topnav{
+		height: 70px;
+	}
+	
+	.topnav .logo{
+		color: #000;
+		font-size: 1.35em;
+	}
+	
+	.title{
+		margin-top: 100px;
+		font-size: 2.5em !important;
+		padding: 20px;
+			
+	}
+	
+	
+	.btn1{
+		padding:10px 0px;
+		box-shadow:0px 3px 8px -3px rgba(1,1,1,0.5);
+		outline:none;
+		border:0;
+		background: transparent linear-gradient(
+		90deg
+		, #AE0A62 0%, #F8AA43 100%) 0% 0% no-repeat padding-box;
+		border-radius:20px;
+		color:#FF7125;
+		font-weight:400;
+		text-align:center;
+		transition:0.5s;
+		height: 50px !important;
+		width: 60% !important;
+		margin-left: 20%;
+		margin-top: -3%;
+		padding-top: 30px;
+
+	}
+	
+	.a{
+		font-size: xx-large !important;
+	}
+	
+	*{
+		overflow-x: hidden;
+	}
+	
+	.section0 .card{
+		min-width: 70% !important;
+	}
+	
+	.slick table td {
+		
+		margin-left: -15px !important;
+	}
+
+	
+	
+	
+	
+}
 
 	
 	</style>
@@ -1264,9 +1330,10 @@ h2{
 <meta property="og:url" content="" />
 <meta property="og:site_name" content="LEVIOOSA" />
 
+	  
+	 
 <!--EXTERNAL CSS-->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/custom.css">
+<link rel="manifest" href="/manifest.json">
 
 <!--PLUGIN-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -1278,8 +1345,8 @@ h2{
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">  
-</head>
-<body>
+
+
  
 
 

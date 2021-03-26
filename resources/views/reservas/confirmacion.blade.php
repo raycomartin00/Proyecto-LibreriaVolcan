@@ -1,3 +1,6 @@
+
+@laravelPWA
+
 <style>
 
 body{

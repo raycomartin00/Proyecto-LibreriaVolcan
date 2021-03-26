@@ -1,4 +1,4 @@
-
+@laravelPWA
 
 <style>
 
@@ -64,6 +64,22 @@
 	.btn{
 		background: #ff7125 !important;
 		border: 0px !important;
+	}
+	
+	
+	@media (max-width: 750px){
+
+		.containerReservas{
+			margin-left: 0px !important;
+			width: 100%;
+			border-radius: 10px;
+		}
+		
+		.container1{
+			width: 95%;
+			margin-left: 0px !important;
+		}
+		
 	}
 	
 	

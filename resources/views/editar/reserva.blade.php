@@ -1,4 +1,4 @@
-
+@laravelPWA
 
 <style>
 
@@ -8,6 +8,7 @@
 		  font-family: 'Comfortaa', cursive !important;
 		  padding:0px;
 		  margin:0px;
+		  overflow-x: hidden;
 		}
 	.containerReservas{
 		
@@ -71,6 +72,25 @@
 	}
 	
 	
+		@media (max-width: 750px){
+
+			.containerReservas{
+				margin-left: 0px !important;
+				width: 100%;
+				border-radius: 10px;
+				height: 800px !important;
+			}
+
+			.container1{
+				width: 95%;
+				margin-left: 0px !important;
+			}
+			
+			
+
+		}
+	
+	
 
 </style>
 
@@ -121,12 +141,12 @@ Fecha de la Reserva</label>
 			  <button type="submit" class="btn btn-info btn-block btn-send">Guardar</button>
 			</div>
 		  </form>
-			
+			<input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
 		</div>	
 			
-		<br><br><br>
+		
 	
-<input type="button" class="btnAtras" onclick="history.back()" name="volver atrรกs" value="Cancelar">
+
 </div>
 
 

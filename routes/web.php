@@ -15,6 +15,12 @@ use App\Models\Libro;
 |
 */
 
+URL::forceScheme('https');
+
+Route::get('/offline', function(){
+	return view('modules/laravelpwa/offline');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });

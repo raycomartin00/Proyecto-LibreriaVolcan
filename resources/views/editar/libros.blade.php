@@ -1,4 +1,4 @@
-
+@laravelPWA
 
 <style>
 
@@ -65,6 +65,22 @@
 	
 		.display-4{
 			font-size: 2.5em !important;
+		}
+	
+	
+		@media (max-width: 750px){
+
+			.containerReservas{
+				margin-left: 0px !important;
+				width: 100%;
+				border-radius: 10px;
+			}
+
+			.container1{
+				width: 95%;
+				margin-left: 0px !important;
+			}
+
 		}
 
 	

@@ -1,4 +1,4 @@
- 
+@laravelPWA 
 
 @extends('layouts.head')
 

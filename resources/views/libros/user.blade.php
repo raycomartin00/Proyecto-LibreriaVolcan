@@ -1,3 +1,5 @@
+@laravelPWA
+
 <style type="text/css">
   
 	input[type="checkbox"] {
