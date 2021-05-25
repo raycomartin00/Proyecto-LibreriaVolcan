@@ -228,6 +228,21 @@
 		background: red !important;
 	}
 	
+		.btnCancelar {
+		  width: auto !important;
+		  background-color: #686868 !important;
+		  border: none !important;
+		  outline: none !important;
+		  height: 50px !important;
+		  border-radius: 10px !important;
+		  color: #fff !important;
+		  text-transform: uppercase !important;
+		  font-weight: 600 !important;
+		  margin: 10px 0 !important;
+		  cursor: pointer !important;
+		  transition: 0.5s !important;
+		}
+	
 	
 	
 	
@@ -318,7 +333,7 @@
 					</table>
 	
 
-	
+	<input type="button" class="btnCancelar btn-primary" onclick="history.back()" name="volver atrás" value="Cancelar">
 
 </div>
 

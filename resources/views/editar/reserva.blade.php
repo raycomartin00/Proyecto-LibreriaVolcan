@@ -17,7 +17,7 @@
 		width: 60%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		text-align: center;
-		height: auto !important;
+		height: 550px !important;
 		background: white !important;
 		background-repeat: no-repeat;
 		 background-size: 100% 100%;
@@ -126,7 +126,11 @@ Fecha de la Reserva</label>
 			<div class="row form-group">
 				<label for="name" class="col-form-label col-md-4"> <i class="material-icons">priority_high</i> Estado</label>
 				<div class="col-md-8">
-				  <input type="text" name="estado" id="name" class="form-control" required value='{{$reserva->estado}}'>
+				 <select class="form-control" name="estado">
+						<option value="Avisado">Avisado</option>
+						<option value="Recogido">Recogido</option>
+						<option value="Pendiente">Pendiente</option>	
+				</select>
 				</div>
 			  </div>
 			

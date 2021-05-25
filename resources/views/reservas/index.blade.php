@@ -165,12 +165,13 @@
 		min-width: 250px;
 		height: 200px;
 		display: inline-block;
-		margin-left: 10%;
+		margin-left: 20%;
 		box-shadow: 9px 5px 24px 5px rgba(0,0,0,0.36) !important;
 		border-radius: 10px;
 		padding: 20px;
 		text-align: center;
 		margin-top: 50px;
+		display: inline-block;
 
 	
 	}
@@ -194,6 +195,9 @@
 	@media (max-width: 950px){
 		.image-container {
 			width: 100% !important;
+		}
+		.misReservas{
+			margin-left: 7%;
 		}
 	}
 	
@@ -339,8 +343,8 @@
         attribution=setup_tool
         page_id="104639161367149"
   theme_color="#FCAD2C"
-  logged_in_greeting="Hola! Cรณmo podemos ayudarte?"
-  logged_out_greeting="Hola! Cรณmo podemos ayudarte?">
+  logged_in_greeting="Hola! Como podemos ayudarte?"
+  logged_out_greeting="Hola! Como podemos ayudarte?">
       </div>
 
 
@@ -350,8 +354,7 @@
 	
 	<a id="link" href="/ReservasUsuario"><div class="misReservas" ><img src="/img/reserva.png" width="100" height="100"><br><br>Mis Reservas</div></a>
 	<a href="{{url('/reservas')}}/{{Auth::user()->id}}"><div class="misReservas"><img src="/img/user.png" width="100" height="100" class="imgDatos"><br><br>Mis Datos</div></a>
-	<div class="misReservas"><img src="/img/cita.png" width="100" height="100">
-		<br><br>"-"</div>
+	
 
 	
 </div>

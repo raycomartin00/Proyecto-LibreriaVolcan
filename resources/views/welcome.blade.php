@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="title" content="Título de la WEB">
     <meta name="description" content="Descripción de la WEB">  
+	  <link rel="manifest" crossorigin="use-credentials" href="/manifest.json">
 	@laravelPWA
   </head> 
 
@@ -1333,14 +1334,14 @@ h2{
 	  
 	 
 <!--EXTERNAL CSS-->
-<link rel="manifest" href="/manifest.json">
+
 
 <!--PLUGIN-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
 
 <!--GOOGLE FONTS-->
 <link rel="preconnect" href="https://fonts.gstatic.com">

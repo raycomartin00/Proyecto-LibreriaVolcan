@@ -148,7 +148,7 @@ body{
                         <div>Avda de los Volcanes 60</div>
                         <div>Tajaste, Tinajo</div>
                         <div>Email: libreriavolcan@gmail.com</div>
-                        <div>Phone: 828453467</div>
+                        <div>Telefono: 828453467</div>
                     </div>
 
                     <div class="col-6 col-md-6">
@@ -194,21 +194,6 @@ body{
                     <div class="col-lg-4 col-sm-5">
                     </div>
 
-                    <div class="col-lg-4 col-sm-5 ml-auto">
-                        <table class="table table-sm table-clear">
-                            <tbody> 
-                                <tr>
-                                    <td class="left">
-                                        <strong>Total</strong>
-                                    </td>
-                                    <td class="text-right bg-light">
-                                        <strong>7.477,36€</strong>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
 
                 </div>
 
