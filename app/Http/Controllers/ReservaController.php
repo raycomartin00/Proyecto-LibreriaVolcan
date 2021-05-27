@@ -71,8 +71,8 @@ class ReservaController extends Controller
 		
 		$user = Auth::user()->email;
 		
-		//Mail::to('raycomartin00@gmail.com')->send(new \App\Mail\TestMail($details));
-		//Mail::to($user)->send(new \App\Mail\TestMail($confirmacion));
+		Mail::to('raycomartin00@gmail.com')->send(new \App\Mail\TestMail($details));
+		Mail::to($user)->send(new \App\Mail\TestMail($confirmacion));
 		
 		$libros = ReservaXLibro::where('id_reserva', $reserva->id_reserva)->get();
       

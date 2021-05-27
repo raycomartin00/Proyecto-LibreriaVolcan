@@ -299,7 +299,7 @@
 								<th>Fecha De La Reserva</th>
 								<th>Datos Del Cliente Y Reserva</th>
 								<th>Estado</th>
-								<th>Nยบ Reserva</th>
+								<th>Reserva</th>
 								<th>Acciones</th>
 								
 							</tr>

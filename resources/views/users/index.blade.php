@@ -335,14 +335,14 @@ a:hover {
 		
 	<div class="mapa">
 		
-    <h4 class="tituloMapa"><i class="material-icons direccion">gps_fixed</i>Dirección del Usuario</h4>
+    <!--<h4 class="tituloMapa"><i class="material-icons direccion">gps_fixed</i>Dirección del Usuario</h4>
     
     <div id="myMap" style="position:relative;width:100%;height:400px;"></div>
     
 		<input type="button" class="btn btn-primary botonLocalizar" onclick="Search()" name="volver atrás" value="Localizar">
 	</div>
 	
-      
+     -->
     </div>
 </div>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>

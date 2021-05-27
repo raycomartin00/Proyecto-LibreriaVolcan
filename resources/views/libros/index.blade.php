@@ -441,11 +441,7 @@ font-family: 'Comfortaa', cursive !important;
 						<input type="number" name="precio"  required>
 			</div>
 			<br>
-			<div class="input-field">
-						<i class="material-icons prefix">person_pin</i>
-						<label for="imagen">Imagen</label><br>
-						<input type="file" name="imagen" id="imagen">
-			</div>
+			
 			<br>
 			<div class="input-field">
 						<i class="material-icons prefix">mode_edit</i>

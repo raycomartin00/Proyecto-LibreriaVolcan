@@ -2,7 +2,7 @@
 <html lang="es">  
   <head> 
 	  @laravelPWA
-    <title>Título de la WEB</title>    
+    <title>Libreria Volcan</title>    
     <meta charset="UTF-8">
     <meta name="title" content="Título de la WEB">
     <meta name="description" content="Descripción de la WEB">
