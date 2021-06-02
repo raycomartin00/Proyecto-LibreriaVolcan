@@ -371,11 +371,7 @@
 <script>
 	
 	
-$(".boton").click(function() {
-	
-	alert("hola");
-  
-});	
+
 	
 	
 	
