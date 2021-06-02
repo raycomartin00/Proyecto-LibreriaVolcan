@@ -9,6 +9,7 @@ Para el correcto funcionamiento de la aplicacion web, debemos tener los siguient
 
  -- Version de Laravel utilizada en el proyecto: Laravel 8
  -- Version de PHP utilizada en el proyecto: PHP 7.3.25
+ -- Gestor de base de datos: MySQL
 
 1.  php7.3-xml
 2.  php7.3-mbstring
